@@ -1,6 +1,29 @@
 # LppT04Matrix
 
-TODO: Write a gem description
+:~/LPP/prct09/tree
+.
+├── Gemfile
+├── Gemfile.lock
+├── Guardfile
+├── lib
+│   ├── lpp_t_04_matrix
+│   │   └── version.rb
+│   └── lpp_t_04_matrix.rb
+├── LICENSE.txt
+├── lpp_t_04_matrix.gemspec
+├── Rakefile
+├── README.md
+└── spec
+    ├── lpp_t_04_matrix_spec.rb
+    └── spec_helper.rb
+
+
+Jerarquia de clases para la creación las matrices:
+
+Se definirá una clase para matrices densas en la que se definirán sus métodos.  
+Se definirá una clase para matrices dispersas que heredará de matrices densas y se redefinirán los metodos necesarios para trabajar con este tipo de matrices.  
+class Matriz_densa  
+Class Matriz_dispersa < Matriz_densa
 
 ## Installation
 
