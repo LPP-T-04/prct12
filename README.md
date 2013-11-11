@@ -1,21 +1,21 @@
 # LppT04Matrix
 
-:~/LPP/prct09/tree
-.
-├── Gemfile
-├── Gemfile.lock
-├── Guardfile
-├── lib
-│   ├── lpp_t_04_matrix
-│   │   └── version.rb
-│   └── lpp_t_04_matrix.rb
-├── LICENSE.txt
-├── lpp_t_04_matrix.gemspec
-├── Rakefile
-├── README.md
-└── spec
-    ├── lpp_t_04_matrix_spec.rb
-    └── spec_helper.rb
+:~/LPP/prct09/tree  
+.  
+├── Gemfile  
+├── Gemfile.lock  
+├── Guardfile  
+├── lib  
+│   ├── lpp_t_04_matrix  
+│   │   └── version.rb  
+│   └── lpp_t_04_matrix.rb  
+├── LICENSE.txt  
+├── lpp_t_04_matrix.gemspec  
+├── Rakefile  
+├── README.md  
+└── spec  
+    ├── lpp_t_04_matrix_spec.rb  
+    └── spec_helper.rb  
 
 
 Jerarquia de clases para la creación las matrices:
