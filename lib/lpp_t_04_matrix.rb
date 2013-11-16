@@ -18,5 +18,10 @@ module LppT04Matrix
 	end
 
 	class MatrizDispersa < Matriz
+		attr_accessor :elemento
+		def initialize (filas, columnas, elemento)
+			super(filas, columnas)
+			@elemento = elemento
+		end
 	end
 end
