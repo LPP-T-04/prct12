@@ -11,6 +11,7 @@ module LppT04Matrix
 
 	class MatrizDensa < Matriz
 	end
+	
 	class MatrizDispersa < Matriz
 	end
 end

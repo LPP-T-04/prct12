@@ -15,8 +15,24 @@ describe LppT04Matrix do
 			end
 		end
 	end
+
 	describe MatrizDensa do
+		describe "Acceder al subindice;" do
+			it "Para acceder al [0,0]" do
+				@m1.elemento[0][0].should eq(1)
+			end
+			it "Para acceder al [0,0]" do
+				@m1.elemento[0][1].should eq(2)
+			end
+			it "Para acceder al [0,0]" do
+				@m1.elemento[1][0].should eq(3)
+			end
+			it "Para acceder al [0,0]" do
+				@m1.elemento[1][1].should eq(4)
+			end
+		end
 	end
+	
 	describe MatrizDispersa do
 	end
 end
