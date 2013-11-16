@@ -2,8 +2,10 @@ require 'spec_helper'
 include  LppT04Matrix
 
 describe LppT04Matrix do
-	
-	describe Matriz do
+	before :all do
+		@m1 = Matriz.new(2,2)
+	end
+		describe Matriz do
 		
 		describe "Se comprueba el numero de:" do
 			it "filas de la matriz" do
