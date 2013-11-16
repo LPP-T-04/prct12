@@ -33,5 +33,9 @@ module LppT04Matrix
 			super(filas, columnas)
 			@elemento = elemento
 		end
+
+		def to_s
+			elemento
+		end
 	end
 end
