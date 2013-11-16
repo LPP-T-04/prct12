@@ -15,6 +15,16 @@ module LppT04Matrix
 			super(filas, columnas)
 			@elemento = elemento
 		end
+		def to_s
+			imprimir = ""
+			@filas.times do |i|
+				@columnas.times do |j|
+					imprimir << "#{elemento[i][j]} "
+				end
+				imprimir << "\n"
+			end
+			imprimir
+		end
 	end
 
 	class MatrizDispersa < Matriz
