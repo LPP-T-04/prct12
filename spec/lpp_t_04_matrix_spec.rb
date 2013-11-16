@@ -61,5 +61,11 @@ describe LppT04Matrix do
 				@m1.elemento[200][50].should eq(200)
 			end
 		end
+
+		describe "Imprimir la matriz" do
+			it "del orden 250x250" do
+				@m1.to_s.should eq({100=>{10=>1, 50=>200}, 200=>{10=>1, 50=>200}})
+			end
+		end
 	end
 end
