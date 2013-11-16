@@ -38,5 +38,22 @@ describe LppT04Matrix do
 	end
 
 	describe MatrizDispersa do
+		before :all do
+			@m1 = MatrizDispersa.new(250, 250, {100 => {10 => 1, 50 => 200}, 200 => {10 => 1, 50 => 200}})
+		end
+		describe "Acceder al subindice;" do
+			it "Para acceder al [0,0]" do
+				@m1.elemento[100][10].should eq(1)
+			end
+			it "Para acceder al [0,0]" do
+				@m1.elemento[100][50].should eq(200)
+			end
+			it "Para acceder al [0,0]" do
+				@m1.elemento[200][10].should eq(1)
+			end
+			it "Para acceder al [0,0]" do
+				@m1.elemento[200][50].should eq(200)
+			end
+		end
 	end
 end
