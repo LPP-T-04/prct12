@@ -22,6 +22,7 @@ describe LppT04Matrix do
 			@m1 = MatrizDensa.new(2,2,[[1,2],[3,4]])
 			@m2 = MatrizDensa.new(2,2,[[2,4],[6,8]])
 			@m3 = MatrizDensa.new(2,2,[[7,10],[15,22]])
+			@m4 = MatrizDensa.new(2,2,[[1,3],[2,4]])
 		end
 		describe "Acceder al subindice;" do
 			it "Para acceder al [0,0]" do

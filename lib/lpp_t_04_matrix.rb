@@ -70,6 +70,18 @@ module LppT04Matrix
 			end
 			MatrizDensa.new(@filas, other.columnas, elemento)
 		end
+
+		def traspuesta
+			elemento = Array.new
+			@columnas.times do |i|
+				elemento_fila = Array.new
+				@filas.times do |j|
+					elemento_fila << @elemento[j][i]
+				end
+				elemento << elemento_fila
+			end
+			MatrizDensa.new(@columnas, @filas, elemento)
+		end
 	end
 
 	class MatrizDispersa < Matriz
