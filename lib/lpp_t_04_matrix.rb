@@ -51,6 +51,25 @@ module LppT04Matrix
 			end
 			MatrizDensa.new(@filas, @columnas,elemento)
 		end
+
+		def *(other)
+			raise ArgumentError, "La longitud de las matrices no coincide." unless @columnas == other.filas
+			elemento = Array.new
+			acumulado = 0
+			@filas.times do |i|
+				elemento_fila = Array.new
+				other.columnas.times do |j|
+					acumulado = 0
+					@columnas.times do |k|
+						suma = @elemento[i][k] * other.elemento[k][j]
+						acumulado = suma + acumulado
+					end
+					elemento_fila << acumulado
+				end
+				elemento << elemento_fila
+			end
+			MatrizDensa.new(@filas, other.columnas, elemento)
+		end
 	end
 
 	class MatrizDispersa < Matriz
