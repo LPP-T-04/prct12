@@ -80,9 +80,16 @@ describe LppT04Matrix do
 				@m1.to_s.should eq({100=>{10=>1, 50=>200}, 200=>{10=>1, 50=>200}})
 			end
 		end
+
 		describe "Suma de dos matrices" do
 			it "del orden mxn" do
 				@m1.+(@m1).to_s.should eq(@m2.to_s)
+			end
+		end	
+
+		describe "Resta de dos matrices" do
+			it "del orden mxn" do
+				@m2.-(@m1).to_s.should eq(@m1.to_s)
 			end
 		end	
 	end
