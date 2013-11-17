@@ -112,5 +112,27 @@ module LppT04Matrix
 			elemento = Array.new
 			
 		end
+
+		def traspuesta
+			elemento = Hash.new(Hash.new())
+			@elemento.each {
+				|key, value| value.each {
+					|key2, value2|  hash = { key => value2}
+					hash2 = {key2 => hash}
+					elemento.merge!(hash2){|key3, oldval, newval| oldval.merge!(newval)}
+					puts hash2
+				}
+			}
+			elemento
+			MatrizDispersa.new(@filas, @columnas, elemento)
+		end
 	end
+end
+
+if __FILE__ == $0
+# Trabajo con la clase:
+include LppT04Matrix
+m5 = MatrizDispersa.new(2, 2, {1 => {1 => 13, 2 => 32}, 2 => {1 => 25, 2 => 41}})
+puts m5
+puts m5.traspuesta
 end
