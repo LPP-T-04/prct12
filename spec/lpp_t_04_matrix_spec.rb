@@ -20,6 +20,7 @@ describe LppT04Matrix do
 	describe MatrizDensa do
 		before :all do
 			@m1 = MatrizDensa.new(2,2,[[1,2],[3,4]])
+			@m2 = MatrizDensa.new(2,2,[[2,4],[6,8]])
 		end
 		describe "Acceder al subindice;" do
 			it "Para acceder al [0,0]" do
@@ -39,6 +40,12 @@ describe LppT04Matrix do
 		describe "Imprimir la matriz" do
 			it "del orden 2x2" do
 				@m1.to_s.should eq("1 2 \n3 4 \n")
+			end
+		end
+		
+		describe "Suma de dos matrices" do
+			it "del orden mxn" do
+				@m1.+(@m1).to_s.should eq(@m2.to_s)
 			end
 		end
 	end
