@@ -94,5 +94,11 @@ module LppT04Matrix
 			elemento = @elemento.merge(other.elemento){|key, oldval, newval| oldval.merge(newval){|key2, oldval2, newval2|oldval2 - newval2}}
 			MatrizDispersa.new(@filas, other.columnas, elemento)
 		end
+
+		def *(other)
+			raise ArgumentError, "La longitud de las matrices no coincide." unless @columnas == other.filas
+			elemento = Array.new
+			
+		end
 	end
 end

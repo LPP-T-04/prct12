@@ -55,6 +55,12 @@ describe LppT04Matrix do
 			end
 		end
 
+		describe "Matriz traspuesta " do
+			it "del orden nxn." do
+				@m1.traspuesta.to_s.should eq(@m4.to_s)
+			end
+		end
+
 		describe "Multiplicacion de matrices del orden axn x nxb" do
 			it "del orden 2x2 x 2x2" do
 				@m1.*(@m1).to_s.should eq(@m3.to_s)
