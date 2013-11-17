@@ -118,7 +118,7 @@ describe LppT04Matrix do
 			it "del orden 2x2 x 2x2" do
 				@m3.*(@m3).to_s.should eq(@m4.to_s)
 			end
-			it "del orden 2x2 x 2x2" do
+			it "del orden 3x2 x 2x3" do
 				@m6.*(@m7).to_s.should eq(@m8.to_s)
 			end
 		end
@@ -129,4 +129,17 @@ describe LppT04Matrix do
 			end
 		end
 	end
+
+	before :all do
+		@m1 = MatrizDensa.new(2,2,[[1,2],[3,4]])
+		@m2 = MatrizDispersa.new(2, 2, {1 => {1 => 1, 2 => 2}, 2 => {1 => 3, 2 => 4}})
+		@m3 = MatrizDensa.new(2,2,[[7,10],[15,22]])
+	end
+
+	describe "Multiplicacion de matrices del orden axn x nxb" do
+		it "del orden 2x2 x 2x2" do
+			@m1.*(@m2).to_s.should eq(@m3.to_s)
+		end
+	end
+
 end
