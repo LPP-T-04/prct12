@@ -53,6 +53,7 @@ describe LppT04Matrix do
 	describe MatrizDispersa do
 		before :all do
 			@m1 = MatrizDispersa.new(250, 250, {100 => {10 => 1, 50 => 200}, 200 => {10 => 1, 50 => 200}})
+			@m2 = MatrizDispersa.new(250, 250, {100 => {10 => 2, 50 => 400}, 200 => {10 => 2, 50 => 400}})
 		end
 		describe "Acceder al subindice;" do
 			it "Para acceder al [0,0]" do
@@ -74,5 +75,10 @@ describe LppT04Matrix do
 				@m1.to_s.should eq({100=>{10=>1, 50=>200}, 200=>{10=>1, 50=>200}})
 			end
 		end
+		describe "Suma de dos matrices" do
+			it "del orden mxn" do
+				@m1.+(@m1).to_s.should eq(@m2.to_s)
+			end
+		end	
 	end
 end
