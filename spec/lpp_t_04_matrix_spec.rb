@@ -66,6 +66,8 @@ describe LppT04Matrix do
 		before :all do
 			@m1 = MatrizDispersa.new(250, 250, {100 => {10 => 1, 50 => 200}, 200 => {10 => 1, 50 => 200}})
 			@m2 = MatrizDispersa.new(250, 250, {100 => {10 => 2, 50 => 400}, 200 => {10 => 2, 50 => 400}})
+			@m3 = MatrizDispersa.new(2, 2, {1 => {1 => 1, 2 => 2}, 2 => {1 => 3, 2 => 4}})
+			@m4 = MatrizDispersa.new(2, 2, {1 => {1 => 7, 2 => 10}, 2 => {1 => 15, 2 => 22}})
 		end
 		describe "Acceder al subindice;" do
 			it "Para acceder al [0,0]" do
@@ -99,5 +101,11 @@ describe LppT04Matrix do
 				@m2.-(@m1).to_s.should eq(@m1.to_s)
 			end
 		end	
+
+		describe "Multiplicacion de matrices del orden axn x nxb" do
+			it "del orden 2x2 x 2x2" do
+				@m3.*(@m3).to_s.should eq(@m4.to_s)
+			end
+		end
 	end
 end
