@@ -76,6 +76,10 @@ describe LppT04Matrix do
 			@m3 = MatrizDispersa.new(2, 2, {1 => {1 => 1, 2 => 2}, 2 => {1 => 3, 2 => 4}})
 			@m4 = MatrizDispersa.new(2, 2, {1 => {1 => 7, 2 => 10}, 2 => {1 => 15, 2 => 22}})
 			@m5 = MatrizDispersa.new(2, 2, {1 => {1 => 1, 2 => 3}, 2 => {1 => 2, 2 => 4}})
+			@m6 = MatrizDispersa.new(3, 2, {2 => {1 => 1}, 3 => { 2 => 4}})
+			@m7 = MatrizDispersa.new(2, 3, {1 => {2 => 6}, 2 => {1 => 7}})
+			@m8 = MatrizDispersa.new(3, 3, {2=>{2=>6}, 3=>{1=>28}})
+			
 		end
 		describe "Acceder al subindice;" do
 			it "Para acceder al [0,0]" do
@@ -113,6 +117,9 @@ describe LppT04Matrix do
 		describe "Multiplicacion de matrices del orden axn x nxb" do
 			it "del orden 2x2 x 2x2" do
 				@m3.*(@m3).to_s.should eq(@m4.to_s)
+			end
+			it "del orden 2x2 x 2x2" do
+				@m6.*(@m7).to_s.should eq(@m8.to_s)
 			end
 		end
 

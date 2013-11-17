@@ -108,8 +108,29 @@ module LppT04Matrix
 		end
 
 		def *(other)
+			other = other.traspuesta
 			raise ArgumentError, "La longitud de las matrices no coincide." unless @columnas == other.filas
-			elemento = Array.new
+			elemento = Hash.new(Hash.new())
+			@elemento.each {
+				|key, value|
+				other.elemento.each {
+					|key1, value1|
+					acumulado = 0
+						value.each {							
+							|key2, value2|
+							if(value1[key2] != nil)
+								acumulado +=  value2 * value1[key2]
+							end
+						}
+					if(acumulado != 0)
+						hash = { key1 => acumulado}
+						hash2 = {key => hash}
+						elemento.merge!(hash2){|key3, oldval, newval| oldval.merge!(newval)}				
+					end
+				}
+			}
+			elemento
+			MatrizDispersa.new(@filas, other.columnas, elemento)
 			
 		end
 
@@ -120,7 +141,6 @@ module LppT04Matrix
 					|key2, value2|  hash = { key => value2}
 					hash2 = {key2 => hash}
 					elemento.merge!(hash2){|key3, oldval, newval| oldval.merge!(newval)}
-					puts hash2
 				}
 			}
 			elemento
@@ -132,7 +152,8 @@ end
 if __FILE__ == $0
 # Trabajo con la clase:
 include LppT04Matrix
-m5 = MatrizDispersa.new(2, 2, {1 => {1 => 13, 2 => 32}, 2 => {1 => 25, 2 => 41}})
-puts m5
-puts m5.traspuesta
+m3 = MatrizDispersa.new(3, 2, {2 => {1 => 1}, 3 => { 2 => 4}})
+m4 = MatrizDispersa.new(2, 3, {1 => {2 => 6}, 2 => {1 => 7}})
+m1 = MatrizDispersa.new(250, 250, {100 => {10 => 1, 50 => 200}, 200 => {10 => 1, 50 => 200}})
+puts m1.*(m1).to_s
 end
