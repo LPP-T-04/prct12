@@ -37,7 +37,13 @@ describe LppT04Matrix do
 			@m12 = MatrizDensa.new(2,2,[[e,f],[g,h]])
 			i = Frac.new(3,2)
 			j = Frac.new(9,2)
+			k = Frac.new(-1,2)
+			l = Frac.new(-3,2)
 			@m13 = MatrizDensa.new(2,2,[[i,3],[j,6]])
+			@m14 = MatrizDensa.new(2,2,[[k,-1],[l,-2]])
+
+			@m15 = MatrizDensa.new(2,2,[[Frac.new(7,2),5],[Frac.new(15,2),11]])
+
 		end
 		describe "Acceder al subindice;" do
 			it "Para acceder al [0,0]" do
@@ -79,7 +85,16 @@ describe LppT04Matrix do
 				@m2.-(@m1).to_s.should eq(@m1.to_s)
 			end
 		end
-
+		describe "Resta de matrices de fracciones y enteros" do
+			it "del orden mxn" do
+				@m9.-(@m1).to_s.should eq(@m14.to_s)
+			end
+		end
+		describe "Resta de matrices de enteros y fracciones" do
+			it "del orden mxn" do
+				@m1.-(@m9).to_s.should eq(@m14.to_s)
+			end
+		end
 		describe "Matriz traspuesta " do
 			it "del orden nxn." do
 				@m1.traspuesta.to_s.should eq(@m4.to_s)
@@ -91,7 +106,16 @@ describe LppT04Matrix do
 				@m1.*(@m1).to_s.should eq(@m3.to_s)
 			end
 		end
-
+		describe "Multiplicacion de matrices de fracciones y enteros" do
+			it "del orden mxn" do
+				@m9.*(@m1).to_s.should eq(@m15.to_s)
+			end
+		end
+		describe "Multiplicacion de matrices de enteros y fracciones" do
+			it "del orden mxn" do
+				@m1.*(@m9).to_s.should eq(@m15.to_s)
+			end
+		end
 		describe "Trabajo con fracciones" do
 			it "suma" do
 				@m9.+(@m9).to_s.should eq (@m1.to_s)
@@ -175,6 +199,8 @@ describe LppT04Matrix do
 		@m3 = MatrizDensa.new(2,2,[[7,10],[15,22]])
 		@m4 = MatrizDensa.new(2,2,[[2,4],[6,8]])
 		@m5 = MatrizDensa.new(2,2,[[0,0],[0,0]])
+		@m6 = MatrizDispersa.new(2, 2, {0 => {0 => Frac.new(1,2), 1 => Frac.new(1,2)}, 1 => {0 => Frac.new(1,2), 1 => Frac.new(1,2)}})
+		@m7 = MatrizDensa.new(2,2,[[Frac.new(3,2),Frac.new(3,2)],[Frac.new(7,2),Frac.new(7,2)]])
 	end
 
 	describe "Trabajo con  matrices de diferente tipo" do
@@ -187,6 +213,9 @@ describe LppT04Matrix do
 			end
 			it "Multiplicacion del orden 2x2 x 2x2" do
 				@m1.*(@m2).to_s.should eq(@m3.to_s)
+			end
+			it "Multiplicacion del orden 2x2 x 2x2 con fracciones y enteros" do
+				@m1.*(@m6).to_s.should eq(@m7.to_s)
 			end
 		end
 	end
@@ -201,6 +230,9 @@ describe LppT04Matrix do
 			end
 			it "Multiplicacion del orden 2x2 x 2x2" do
 				@m2.*(@m1).to_s.should eq(@m3.to_s)
+			end
+			it "Multiplicacion del orden 2x2 x 2x2 con fracciones y enteros" do
+				@m6.*(@m1).to_s.should eq(@m7.to_s)
 			end
 		end
 	end

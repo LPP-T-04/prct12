@@ -261,24 +261,20 @@ class Frac
                 
     end
 
-    def -(*other) # Calcula la resta de dos fracciones.
-        if (other[0].class == Frac)
-            Frac.new(@numerador*other[0].denominador - other[0].numerador*@denominador , @denominador*other[0].denominador)
+    def -(other) # Calcula la resta de dos fracciones.
+        if (other.class == Frac)
+            Frac.new(@numerador*other.denominador - other.numerador*@denominador , @denominador*other.denominador)
         else
-            if (@numerador > 0 && @denominador > 0)
-                Frac.new(-1 * @numerador, @denominador)
-            elsif (@numerador > 0 && @denominador < 0)
-                Frac.new(@numerador, -1 * @denominador)
-            elsif (@numerador < 0 && @denominador > 0)
-                Frac.new(-1 * @numerador, @denominador)
-            else (@numerador < 0 && @denominador < 0)
-                Frac.new(@numerador, -1 * @denominador)
-            end                    
+        	Frac.new(@numerador - other*@denominador , @denominador)
         end
     end
 
     def *(other) # Calcula la multiplicacion de dos fracciones.
-        Frac.new(@numerador * other.numerador, @denominador * other.denominador)
+    	if other.class == Frac
+            Frac.new(@numerador * other.numerador, @denominador * other.denominador)
+        elsif other.class == Fixnum
+            Frac.new(@numerador * other, @denominador)
+        end
     end
 
     def /(other) # Calcula la division de dos fracciones.
@@ -310,6 +306,7 @@ include LppT04Matrix
 m1 = MatrizDensa.new(2,2,[[1,2],[3,4]])
 m2 = MatrizDispersa.new(2, 2, {0 => {0 => 1, 1 => 2}, 1 => {0 => 3, 1 => 4}})
 m3 = MatrizDensa.new(2,2,[[7,10],[15,22]])
+m4 = MatrizDispersa.new(2, 2, {0 => {0 => Frac.new(1,2), 1 => Frac.new(1,2)}, 1 => {0 => Frac.new(1,2), 1 => Frac.new(1,2)}})
 a = Frac.new(1,2)
 b = Frac.new(2,2)
 c = Frac.new(3,2)
@@ -320,8 +317,15 @@ g = Frac.new(3,1)
 h = Frac.new(6,1)
 m9 = MatrizDensa.new(2,2,[[a,b],[c,d]])
 m10 = MatrizDensa.new(2,2,[[e,3],[f,6]])
-puts m9+(m1)
+puts m9-(m1)
 puts
-puts m1+(m9)
+puts m1-(m9)
+puts 
+puts m4.to_s
+puts m4*m1
+puts m1*m4
+puts m1*m1
+puts (m2*m4).to_s
+puts (m4*m2).to_s
 
 end
