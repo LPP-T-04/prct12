@@ -119,8 +119,15 @@ module LppT04Matrix
 		
 		def +(other)
 			raise ArgumentError, "La longitud de las matrices no coincide." unless @filas == other.filas && @columnas == other.columnas
-			elemento = @elemento.merge(other.elemento){|key, oldval, newval| oldval.merge(newval){|key2, oldval2, newval2|oldval2 + newval2}}
-			MatrizDispersa.new(@filas, other.columnas, elemento)
+			case other
+			when MatrizDensa
+				other.+(self)
+			when MatrizDispersa
+				elemento = @elemento.merge(other.elemento){|key, oldval, newval| oldval.merge(newval){|key2, oldval2, newval2|oldval2 + newval2}}
+				MatrizDispersa.new(@filas, other.columnas, elemento)
+			else
+				raise TypeError.new("Cannot coerce #{other.inspect} to a Matriz")
+			end
 		end
 
 		def -(other)
@@ -178,8 +185,6 @@ include LppT04Matrix
 m1 = MatrizDensa.new(2,2,[[1,2],[3,4]])
 m2 = MatrizDispersa.new(2, 2, {0 => {0 => 1, 1 => 2}, 1 => {0 => 3, 1 => 4}})
 m3 = MatrizDensa.new(2,2,[[7,10],[15,22]])
-puts m2.indice(1,5) 
-puts m1*(m2)
-puts m2
+puts m2+(m1)
 
 end
