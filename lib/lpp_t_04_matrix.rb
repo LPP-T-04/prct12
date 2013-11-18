@@ -15,6 +15,15 @@ module LppT04Matrix
 			super(filas, columnas)
 			@elemento = elemento
 		end
+
+		def [](i)
+			@elemento[i]
+ 		end
+
+ 		def indice(i,j)
+ 			@elemento[i][j]
+ 		end
+
 		def to_s
 			imprimir = ""
 			@filas.times do |i|
@@ -61,7 +70,7 @@ module LppT04Matrix
 				other.columnas.times do |j|
 					acumulado = 0
 					@columnas.times do |k|
-						suma = @elemento[i][k] * other.elemento[k][j]
+						suma =  @elemento[i][k] * other.indice(k,j)
 						acumulado = suma + acumulado
 					end
 					elemento_fila << acumulado
@@ -84,15 +93,28 @@ module LppT04Matrix
 		end
 	end
 
+
 	class MatrizDispersa < Matriz
 		attr_accessor :elemento
 		def initialize (filas, columnas, elemento)
 			super(filas, columnas)
-			@elemento = elemento
+    		@elemento = elemento
 		end
 
+		def [](i)
+			@elemento[i]
+ 		end
+ 		def indice(i,j)
+ 			elemento = @elemento.fetch(i,0)
+ 			if elemento!= 0
+ 				elemento.fetch(j,0)
+ 			else
+ 				0
+ 			end
+ 		end
+
 		def to_s
-			elemento
+			@elemento
 		end
 		
 		def +(other)
@@ -152,8 +174,12 @@ end
 if __FILE__ == $0
 # Trabajo con la clase:
 include LppT04Matrix
-m3 = MatrizDispersa.new(3, 2, {2 => {1 => 1}, 3 => { 2 => 4}})
-m4 = MatrizDispersa.new(2, 3, {1 => {2 => 6}, 2 => {1 => 7}})
-m1 = MatrizDispersa.new(250, 250, {100 => {10 => 1, 50 => 200}, 200 => {10 => 1, 50 => 200}})
-puts m1.*(m1).to_s
+
+m1 = MatrizDensa.new(2,2,[[1,2],[3,4]])
+m2 = MatrizDispersa.new(2, 2, {0 => {0 => 1, 1 => 2}, 1 => {0 => 3, 1 => 4}})
+m3 = MatrizDensa.new(2,2,[[7,10],[15,22]])
+puts m2.indice(1,5) 
+puts m1*(m2)
+puts m2
+
 end

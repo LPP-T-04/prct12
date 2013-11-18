@@ -132,11 +132,11 @@ describe LppT04Matrix do
 
 	before :all do
 		@m1 = MatrizDensa.new(2,2,[[1,2],[3,4]])
-		@m2 = MatrizDispersa.new(2, 2, {1 => {1 => 1, 2 => 2}, 2 => {1 => 3, 2 => 4}})
+		@m2 = MatrizDispersa.new(2, 2, {0 => {0 => 1, 1 => 2}, 1 => {0 => 3, 1 => 4}})
 		@m3 = MatrizDensa.new(2,2,[[7,10],[15,22]])
 	end
 
-	describe "Multiplicacion de matrices del orden axn x nxb" do
+	describe "Multiplicacion de matrices de diferente tipo" do
 		it "del orden 2x2 x 2x2" do
 			@m1.*(@m2).to_s.should eq(@m3.to_s)
 		end
