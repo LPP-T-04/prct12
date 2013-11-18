@@ -41,7 +41,7 @@ module LppT04Matrix
 			@filas.times do |i|
 				elemento_fila = Array.new
 				@columnas.times do |j|
-					elemento_fila << @elemento[i][j] + other.elemento[i][j]
+					elemento_fila << @elemento[i][j].+(other.elemento[i][j])
 				end
 				elemento << elemento_fila
 			end
@@ -289,6 +289,10 @@ class Frac
         result = self./(other)
         result = (result.numerador%result.denominador).to_i
     end
+
+    def coerce(other)
+    	[self,other]
+    end
 end
 
 def gcd(u, v)
@@ -317,7 +321,7 @@ h = Frac.new(6,1)
 m9 = MatrizDensa.new(2,2,[[a,b],[c,d]])
 m10 = MatrizDensa.new(2,2,[[e,3],[f,6]])
 puts m9+(m1)
-puts m10
-puts m9.+(m1).to_s == m10.to_s
+puts
+puts m1+(m9)
 
 end
