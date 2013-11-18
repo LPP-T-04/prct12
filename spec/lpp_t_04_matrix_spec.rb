@@ -157,6 +157,9 @@ describe LppT04Matrix do
 			it "Suma de dos matrices del orden mxn" do
 				@m2.+(@m1).to_s.should eq(@m4.to_s)
 			end
+			it "Resta de dos matrices del orden mxn" do
+				@m2.-(@m1).to_s.should eq(@m5.to_s)
+			end
 		end
 	end
 
