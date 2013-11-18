@@ -152,4 +152,12 @@ describe LppT04Matrix do
 		end
 	end
 
+	describe "Trabajo con  matrices de diferente tipo" do
+		describe "Matriz Densa -> Matriz Dispersa" do
+			it "Suma de dos matrices del orden mxn" do
+				@m2.+(@m1).to_s.should eq(@m4.to_s)
+			end
+		end
+	end
+
 end
