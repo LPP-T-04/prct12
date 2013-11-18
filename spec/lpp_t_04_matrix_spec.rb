@@ -160,6 +160,9 @@ describe LppT04Matrix do
 			it "Resta de dos matrices del orden mxn" do
 				@m2.-(@m1).to_s.should eq(@m5.to_s)
 			end
+			it "Multiplicacion del orden 2x2 x 2x2" do
+				@m2.*(@m1).to_s.should eq(@m3.to_s)
+			end
 		end
 	end
 
