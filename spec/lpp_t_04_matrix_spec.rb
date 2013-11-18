@@ -69,6 +69,11 @@ describe LppT04Matrix do
 				@m9.+(@m1).to_s.should eq(@m13.to_s)
 			end
 		end
+		describe "Suma de matrices de enteros y fracciones" do
+			it "del orden mxn" do
+				@m1.+(@m9).to_s.should eq(@m13.to_s)
+			end
+		end
 		describe "Resta de dos matrices" do
 			it "del orden mxn" do
 				@m2.-(@m1).to_s.should eq(@m1.to_s)
