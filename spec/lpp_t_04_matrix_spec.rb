@@ -134,11 +134,18 @@ describe LppT04Matrix do
 		@m1 = MatrizDensa.new(2,2,[[1,2],[3,4]])
 		@m2 = MatrizDispersa.new(2, 2, {0 => {0 => 1, 1 => 2}, 1 => {0 => 3, 1 => 4}})
 		@m3 = MatrizDensa.new(2,2,[[7,10],[15,22]])
+		@m4 = MatrizDensa.new(2,2,[[2,4],[6,8]])
+		@m5 = MatrizDensa.new(2,2,[[0,0],[0,0]])
 	end
 
-	describe "Multiplicacion de matrices de diferente tipo" do
-		it "del orden 2x2 x 2x2" do
-			@m1.*(@m2).to_s.should eq(@m3.to_s)
+	describe "Trabajo con  matrices de diferente tipo" do
+		describe "Matriz Densa -> Matriz Dispersa" do
+			it "Suma de dos matrices del orden mxn" do
+				@m1.+(@m2).to_s.should eq(@m4.to_s)
+			end
+			it "Multiplicacion del orden 2x2 x 2x2" do
+				@m1.*(@m2).to_s.should eq(@m3.to_s)
+			end
 		end
 	end
 
