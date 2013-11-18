@@ -144,30 +144,36 @@ module LppT04Matrix
 		end
 
 		def *(other)
-			other = other.traspuesta
 			raise ArgumentError, "La longitud de las matrices no coincide." unless @columnas == other.filas
-			elemento = Hash.new(Hash.new())
-			@elemento.each {
-				|key, value|
-				other.elemento.each {
-					|key1, value1|
-					acumulado = 0
-						value.each {							
-							|key2, value2|
-							if(value1[key2] != nil)
-								acumulado +=  value2 * value1[key2]
-							end
-						}
-					if(acumulado != 0)
-						hash = { key1 => acumulado}
-						hash2 = {key => hash}
-						elemento.merge!(hash2){|key3, oldval, newval| oldval.merge!(newval)}				
-					end
+			case other
+			when MatrizDensa
+				other.*(self)
+			when MatrizDispersa
+				other = other.traspuesta
+				elemento = Hash.new(Hash.new())
+				@elemento.each {
+					|key, value|
+					other.elemento.each {
+						|key1, value1|
+						acumulado = 0
+							value.each {							
+								|key2, value2|
+								if(value1[key2] != nil)
+									acumulado +=  value2 * value1[key2]
+								end
+							}
+						if(acumulado != 0)
+							hash = { key1 => acumulado}
+							hash2 = {key => hash}
+							elemento.merge!(hash2){|key3, oldval, newval| oldval.merge!(newval)}				
+						end
+					}
 				}
-			}
-			elemento
-			MatrizDispersa.new(@filas, other.columnas, elemento)
-			
+				elemento
+				MatrizDispersa.new(@filas, other.columnas, elemento)
+			else
+				raise TypeError.new("Cannot coerce #{other.inspect} to a Matriz")
+			end		
 		end
 
 		def traspuesta
