@@ -199,7 +199,14 @@ describe LppT04Matrix do
 				@m3.traspuesta.to_s.should eq(@m5.to_s)
 			end
 		end
-		
+		describe "Calculo de maximo y minimo" do
+			it "Maximo" do
+				@m1.maximo.should eq (4)
+			end
+			it "Minimo" do
+				@m1.minimo.should eq (1)
+			end
+		end
 	end
 
 	before :all do
