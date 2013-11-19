@@ -91,6 +91,24 @@ module LppT04Matrix
 			end
 			MatrizDensa.new(@columnas, @filas, elemento)
 		end
+		def maximo
+			aux = @elemento[0][0]
+			@columnas.times do |i|
+				@filas.times do |j|
+					aux = @elemento[i][j] if @elemento[i][j] > aux
+				end
+			end
+			aux
+		end
+		def minimo
+			aux = @elemento[0][0]
+			@columnas.times do |i|
+				@filas.times do |j|
+					aux = @elemento[i][j] if @elemento[i][j] < aux
+				end
+			end
+			aux
+		end
 	end
 
 

@@ -199,6 +199,7 @@ describe LppT04Matrix do
 				@m3.traspuesta.to_s.should eq(@m5.to_s)
 			end
 		end
+		
 	end
 
 	before :all do
