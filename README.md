@@ -6,24 +6,42 @@
 ├── Gemfile.lock  
 ├── Guardfile  
 ├── lib  
-│   ├── lpp_t_04_matrix  
-│   │   └── version.rb  
-│   └── lpp_t_04_matrix.rb  
+│   ├── lpp_t_04_matrix  
+│   │   └── version.rb  
+│   └── lpp_t_04_matrix.rb  
 ├── LICENSE.txt  
 ├── lpp_t_04_matrix.gemspec  
 ├── Rakefile  
 ├── README.md  
 └── spec  
     ├── lpp_t_04_matrix_spec.rb  
-    └── spec_helper.rb  
+    └── spec_helper.rb    
+
+## Descripción de los objetivos de la práctica
+
+Para realización de esta práctica se ha creado una jerarquía de clases.Teniendo en cuenta que tenemos una clase abstracta de nombre Matriz, y de la cual han heredado las otras dos clases que definen el tipo de objetos que tenemos, MatrizDensa y MatrizDispersa, se han implementado los métodos para operar con ambos tipos de matrices sin importar que objeto sea. Además se ha incluido el tratamiento de fracciones desarrollado en la práctica anterior con la idea de que la matriz sea capaz de operar con elementos del tipo Franction. Los métodos implemnetados son:  
+    Suma, Resta, Multiplicación y Traspuesta.    
+***
 
 
-Jerarquia de clases para la creación las matrices:
+## Jerarquía de clases para la creación las matrices:
 
-Se definirá una clase para matrices densas en la que se definirán sus métodos.  
-Se definirá una clase para matrices dispersas que heredará de matrices densas y se redefinirán los metodos necesarios para trabajar con este tipo de matrices.  
-class Matriz_densa  
-Class Matriz_dispersa < Matriz_densa
+class Matriz<pre>
+    @filas
+    @columnas
+</pre>
+end  
+
+Class MatrizDensa < Matriz
+<pre>   #Se definen los métodos que trabajan con matrices densas
+</pre>
+end  
+
+Class MatrizDispersa < Matriz
+<pre>    #Se definen los métodos que trabajan con matrices dispersas
+</pre>
+end  
+
 
 ## Installation
 

@@ -8,8 +8,14 @@ Gem::Specification.new do |spec|
   spec.version       = LppT04Matrix::VERSION
   spec.authors       = ["EliezerCruzSuarez"]
   spec.email         = ["alu0100611298@ull.edu.es"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{Para realizacion de esta practica se ha creado una jerarquia de clases. 
+    Teniendo en cuenta que tenemos una clase abstracta de nombre Matriz, y de la cual han heredado las
+    otras dos clases que definen el tipo de objetos que tenemos, MatrizDensa y MatrizDispersa, se han
+    implementado los metodos para operar con ambos tipos de matrices, sin importar que objeto sea.
+    Además se ha incluido el tratamiento de fracciones desarrollado en la practica anterior con la idea
+    de que la matriz sea capaz de operar con elementos del tipo Franction. Los metodos implemnetados son: 
+    suma, resta, multiplicacion y traspuesta.}
+  spec.summary       = %q{Operacion con matrices densas y dispersas}
   spec.homepage      = ""
   spec.license       = "MIT"
 
