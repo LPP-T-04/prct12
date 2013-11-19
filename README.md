@@ -41,7 +41,21 @@ Class MatrizDispersa < Matriz
 <pre>    #Se definen los métodos que trabajan con matrices dispersas
 </pre>
 end  
+  
+##  Trabajo con matrices  
 
+Un ejemplo de como construiremos una matriz densa es:    
+m3 = MatrizDensa.new(2,2,[[7,10],[15,22]])  
+Deberemos llamar a la clase MatrizDensa.  
+Los dos primero parametros son el número de filas y el número de columnas.  
+A continuación se le pasa un arrary que contiene todos los elementos de la matriz.  
+
+Un ejemplo de como construiremos una matriz dispersa es:    
+m2 = MatrizDispersa.new(2, 2, {0 => {0 => 1, 1 => 2}, 1 => {0 => 3, 1 => 4}})  
+Se llama a la clase MatrizDispersa.  
+Los dos primero parametros son el número de filas y el número de columnas.  
+A continuación se le pasa un hash que contiene los elementos no nulos de la matriz del tipo:  
+[FILA] => {[COLUMNA] => [VALOR], [COLUMNA] => [VALOR], ...}, ...  
 
 ## Installation
 

@@ -304,6 +304,7 @@ if __FILE__ == $0
 include LppT04Matrix
 
 m1 = MatrizDensa.new(2,2,[[1,2],[3,4]])
+=begin
 m2 = MatrizDispersa.new(2, 2, {0 => {0 => 1, 1 => 2}, 1 => {0 => 3, 1 => 4}})
 m3 = MatrizDensa.new(2,2,[[7,10],[15,22]])
 m4 = MatrizDispersa.new(2, 2, {0 => {0 => Frac.new(1,2), 1 => Frac.new(1,2)}, 1 => {0 => Frac.new(1,2), 1 => Frac.new(1,2)}})
@@ -327,5 +328,6 @@ puts m1*m4
 puts m1*m1
 puts (m2*m4).to_s
 puts (m4*m2).to_s
-
+=end
+puts m1
 end
