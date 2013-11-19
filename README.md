@@ -55,7 +55,12 @@ m2 = MatrizDispersa.new(2, 2, {0 => {0 => 1, 1 => 2}, 1 => {0 => 3, 1 => 4}})
 Se llama a la clase MatrizDispersa.  
 Los dos primero parametros son el número de filas y el número de columnas.  
 A continuación se le pasa un hash que contiene los elementos no nulos de la matriz del tipo:  
-[FILA] => {[COLUMNA] => [VALOR], [COLUMNA] => [VALOR], ...}, ...  
+[FILA] => {[COLUMNA] => [VALOR], [COLUMNA] => [VALOR], ...}, ... 
+
+Un ejemplo de como construiremos una fracción es:    
+a = Frac.new(1,2) 
+Se llama a la clase Frac.  
+El primer parámetro que se le pasa es el numerador y el sgundo el denominador.
 
 ## Installation
 
@@ -72,6 +77,24 @@ Or install it yourself as:
     $ gem install lpp_t_04_matrix
 
 ## Usage
+
+	require 'lpp_t_04_matrix'
+	include LppT04Matrix
+
+    Para operar con matrices se definen los siguientes métodos:
+    m3 = MatrizDensa.new(2,2,[[7,10],[15,22]])
+    m2 = MatrizDispersa.new(2, 2, {0 => {0 => 1, 1 => 2}, 1 => {0 => 3, 1 => 4}})
+    Suma: Se denomina + y se la pasa un objeto matriz.
+    Ejemplo: m1+m2
+    Resta: Se denomina - y se la pasa un objeto matriz.
+    Ejemplo: m1-m2
+    Multiplicación: Se denomina * y se la pasa un objeto matriz.
+    Ejemplo: m1*m2
+    Máximo: Se denomina maximo devuelve el valor del máximo.
+    Ejemplo: m1.maximo
+    Mínimo: Se denomina maximo devuelve el valor del Mínimo.
+    Ejemplo: m1.minimo
+
 
 
 ## Contributing
