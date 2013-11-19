@@ -206,6 +206,32 @@ module LppT04Matrix
 			elemento
 			MatrizDispersa.new(@filas, @columnas, elemento)
 		end
+		def maximo
+			aux = @elemento.keys
+			aux1 = aux[0]
+			aux2 = @elemento[aux1].values
+			mayor = aux2[0]
+			@elemento.each {
+				|key, value| value.each {
+					|key2, value2|
+					mayor = indice(key,key2) if indice(key,key2) > mayor
+				}
+			}
+			mayor
+		end
+		def minimo
+			aux = @elemento.keys
+			aux1 = aux[0]
+			aux2 = @elemento[aux1].values
+			mayor = aux2[0]
+			@elemento.each {
+				|key, value| value.each {
+					|key2, value2|
+					mayor = indice(key,key2) if indice(key,key2) < mayor
+				}
+			}
+			mayor
+		end
 	end
 end
 

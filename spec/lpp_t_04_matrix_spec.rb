@@ -201,7 +201,7 @@ describe LppT04Matrix do
 		end
 		describe "Calculo de maximo y minimo" do
 			it "Maximo" do
-				@m1.maximo.should eq (4)
+				@m1.maximo.should eq (200)
 			end
 			it "Minimo" do
 				@m1.minimo.should eq (1)
