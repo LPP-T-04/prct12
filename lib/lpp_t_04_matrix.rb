@@ -1,30 +1,30 @@
 require "lpp_t_04_matrix/version"
 
-module LppT04Matrix
+module LppT04Matrix # Clase Abstracta Matriz
 	class Matriz
-	  	attr_accessor :filas, :columnas
+	  	attr_accessor :filas, :columnas # Contructor de la clase Matriz
 	  	def initialize (filas, columnas)
 	  		@filas = filas
 	  		@columnas = columnas
 	  	end
 	end
 
-	class MatrizDensa < Matriz
+	class MatrizDensa < Matriz # Clase Matriz Densa hereda de Matriz
 		attr_accessor :elemento
-		def initialize (filas, columnas, elemento)
+		def initialize (filas, columnas, elemento) # Contructor de la clase Matriz
 			super(filas, columnas)
 			@elemento = elemento
 		end
 
-		def [](i)
+		def [](i) # Metodo de acceso a la matriz
 			@elemento[i]
  		end
 
- 		def indice(i,j)
+ 		def indice(i,j) #Devuelve el valor del indice i j
  			@elemento[i][j]
  		end
 
-		def to_s
+		def to_s # Convierte la fraccion a una cadena
 			imprimir = ""
 			@filas.times do |i|
 				@columnas.times do |j|
@@ -35,7 +35,7 @@ module LppT04Matrix
 			imprimir
 		end
 
-		def +(other)
+		def +(other) #Suma dos Fracciones se le pasa un tipo fraccion.
 			raise ArgumentError, "La longitud de las matrices no coincide." unless @filas == other.filas && @columnas == other.columnas
 			elemento = Array.new
 			@filas.times do |i|
@@ -48,7 +48,7 @@ module LppT04Matrix
 			MatrizDensa.new(@filas, @columnas,elemento)
 		end
 
-		def -(other)
+		def -(other)# Resta dos Fracciones se le pasa un tipo fraccion.
 			raise ArgumentError, "La longitud de las matrices no coincide." unless @filas == other.filas && @columnas == other.columnas
 			elemento = Array.new
 			@filas.times do |i|
@@ -61,7 +61,7 @@ module LppT04Matrix
 			MatrizDensa.new(@filas, @columnas,elemento)
 		end
 
-		def *(other)
+		def *(other) # Multiplica dos Fracciones se le pasa un tipo fraccion.
 			raise ArgumentError, "La longitud de las matrices no coincide." unless @columnas == other.filas
 			elemento = Array.new
 			acumulado = 0
@@ -80,7 +80,7 @@ module LppT04Matrix
 			MatrizDensa.new(@filas, other.columnas, elemento)
 		end
 
-		def traspuesta
+		def traspuesta # Devuelve la trasuesta de una Matriz
 			elemento = Array.new
 			@columnas.times do |i|
 				elemento_fila = Array.new
@@ -91,7 +91,7 @@ module LppT04Matrix
 			end
 			MatrizDensa.new(@columnas, @filas, elemento)
 		end
-		def maximo
+		def maximo # Devuelve el valor maximo
 			aux = @elemento[0][0]
 			@columnas.times do |i|
 				@filas.times do |j|
@@ -100,7 +100,7 @@ module LppT04Matrix
 			end
 			aux
 		end
-		def minimo
+		def minimo # Devuelve el valor minimo.
 			aux = @elemento[0][0]
 			@columnas.times do |i|
 				@filas.times do |j|
@@ -112,17 +112,17 @@ module LppT04Matrix
 	end
 
 
-	class MatrizDispersa < Matriz
+	class MatrizDispersa < Matriz # Clase Matriz Dispersa hereda de Matriz
 		attr_accessor :elemento
 		def initialize (filas, columnas, elemento)
 			super(filas, columnas)
     		@elemento = elemento
 		end
 
-		def [](i)
+		def [](i) # Metodo de acceso a la matriz
 			@elemento[i]
  		end
- 		def indice(i,j)
+ 		def indice(i,j) #Devuelve el valor del indice i j
  			elemento = @elemento.fetch(i,0)
  			if elemento!= 0
  				elemento.fetch(j,0)
@@ -131,11 +131,11 @@ module LppT04Matrix
  			end
  		end
 
-		def to_s
+		def to_s # Convierte la fraccion a una cadena
 			@elemento
 		end
 		
-		def +(other)
+		def +(other) #Suma dos Fracciones se le pasa un tipo fraccion.
 			raise ArgumentError, "La longitud de las matrices no coincide." unless @filas == other.filas && @columnas == other.columnas
 			case other
 			when MatrizDensa
@@ -148,7 +148,7 @@ module LppT04Matrix
 			end
 		end
 
-		def -(other)
+		def -(other) # Resta dos Fracciones se le pasa un tipo fraccion.
 			raise ArgumentError, "La longitud de las matrices no coincide." unless @filas == other.filas && @columnas == other.columnas
 			case other
 			when MatrizDensa
@@ -161,7 +161,7 @@ module LppT04Matrix
 			end
 		end
 
-		def *(other)
+		def *(other) # Multiplica dos Fracciones se le pasa un tipo fraccion.
 			raise ArgumentError, "La longitud de las matrices no coincide." unless @columnas == other.filas
 			case other
 			when MatrizDensa
@@ -194,7 +194,7 @@ module LppT04Matrix
 			end		
 		end
 
-		def traspuesta
+		def traspuesta  # Devuelve la trasuesta de una Matriz
 			elemento = Hash.new(Hash.new())
 			@elemento.each {
 				|key, value| value.each {
@@ -206,7 +206,7 @@ module LppT04Matrix
 			elemento
 			MatrizDispersa.new(@filas, @columnas, elemento)
 		end
-		def maximo
+		def maximo # Devuelve el valor maximo
 			aux = @elemento.keys
 			aux1 = aux[0]
 			aux2 = @elemento[aux1].values
@@ -219,7 +219,7 @@ module LppT04Matrix
 			}
 			mayor
 		end
-		def minimo
+		def minimo # Devuelve el valor minimo.
 			aux = @elemento.keys
 			aux1 = aux[0]
 			aux2 = @elemento[aux1].values

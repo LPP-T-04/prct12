@@ -82,7 +82,7 @@ Or install it yourself as:
 	include LppT04Matrix
 
     Para operar con matrices se definen los siguientes métodos:
-    m3 = MatrizDensa.new(2,2,[[7,10],[15,22]])
+    m1 = MatrizDensa.new(2,2,[[7,10],[15,22]])
     m2 = MatrizDispersa.new(2, 2, {0 => {0 => 1, 1 => 2}, 1 => {0 => 3, 1 => 4}})
     Suma: Se denomina + y se la pasa un objeto matriz.
     Ejemplo: m1+m2
