@@ -6,8 +6,8 @@ require 'lpp_t_04_matrix/version'
 Gem::Specification.new do |spec|
   spec.name          = "lpp_t_04_matrix"
   spec.version       = LppT04Matrix::VERSION
-  spec.authors       = ["EliezerCruzSuarez"]
-  spec.email         = ["alu0100611298@ull.edu.es"]
+  spec.authors       = ["Eliezer Cruz Suarez, Carlos Barreda Falciano"]
+  spec.email         = ["alu0100611298@ull.edu.es, alu0100596113"]
   spec.description   = %q{Para realizacion de esta practica se ha creado una jerarquia de clases. 
     Teniendo en cuenta que tenemos una clase abstracta de nombre Matriz, y de la cual han heredado las
     otras dos clases que definen el tipo de objetos que tenemos, MatrizDensa y MatrizDispersa, se han

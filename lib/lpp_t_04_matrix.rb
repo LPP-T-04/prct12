@@ -1,29 +1,59 @@
 require "lpp_t_04_matrix/version"
 
-module LppT04Matrix # Clase Abstracta Matriz
-	class Matriz
-	  	attr_accessor :filas, :columnas # Contructor de la clase Matriz
-	  	def initialize (filas, columnas)
+# == Modulo que contiene la gema para el trabajo con matrices.
+#
+# Operacion con matrices densas y dispersas.
+#
+# Authors: Eliezer Cruz Suarez, Carlos Barreda Falciano
+#
+# Email: alu0100611298@ull.edu.es, alu0100596113@ull.edu.es
+#
+# Para realizacion de esta practica se ha creado una jerarquia de clases. 
+# Teniendo en cuenta que tenemos una clase abstracta de nombre Matriz, y de la cual han heredado las otras dos clases que definen el tipo de objetos que tenemos, MatrizDensa y MatrizDispersa, se han     implementado los metodos para operar con ambos tipos de matrices, sin importar que objeto sea.
+# Además se ha incluido el tratamiento de fracciones desarrollado en la practica anterior con la idea     de que la matriz sea capaz de operar con elementos del tipo Franction. Los metodos implemnetados son:
+#
+# * Suma.
+# * Resta.
+# * Multiplicacion.
+# * Traspuesta.
+# 
+module LppT04Matrix 
+
+	# Clase Abstracta Matriz
+	class Matriz # Clase Abstracta Matriz
+		# Variable que guarda el numero de filas y columnas de la matriz.
+	  	attr_accessor :filas, :columnas 
+	  	# Contructor de la clase Matriz
+	  	def initialize (filas, columnas) # Contructor de la clase Matriz
+	  		# Variable que guarda el numero de filas de la matriz.
 	  		@filas = filas
+	  		# Variable que guarda el numero de columnas de la matriz.
 	  		@columnas = columnas
 	  	end
 	end
 
+	# Clase Matriz Densa hereda de Matriz
 	class MatrizDensa < Matriz # Clase Matriz Densa hereda de Matriz
+		# Vector en el que se almacena el valor de los elementos de la matriz.
 		attr_accessor :elemento
-		def initialize (filas, columnas, elemento) # Contructor de la clase Matriz
+		# Contructor de la clase MatrizDensa
+		def initialize (filas, columnas, elemento) # Contructor de la clase MatrizDensa
 			super(filas, columnas)
+			# Vector en el que se almacena el valor de los elementos de la matriz.
 			@elemento = elemento
 		end
 
+		# Metodo de acceso a la matriz
 		def [](i) # Metodo de acceso a la matriz
 			@elemento[i]
  		end
 
- 		def indice(i,j) #Devuelve el valor del indice i j
+ 		# Devuelve el valor del indice i j
+ 		def indice(i,j) # Devuelve el valor del indice i j
  			@elemento[i][j]
  		end
 
+ 		# Convierte la fraccion a una cadena
 		def to_s # Convierte la fraccion a una cadena
 			imprimir = ""
 			@filas.times do |i|
@@ -35,7 +65,8 @@ module LppT04Matrix # Clase Abstracta Matriz
 			imprimir
 		end
 
-		def +(other) #Suma dos Fracciones se le pasa un tipo fraccion.
+		# Suma dos Fracciones se le pasa un tipo fraccion.
+		def +(other) # Suma dos Fracciones se le pasa un tipo fraccion.
 			raise ArgumentError, "La longitud de las matrices no coincide." unless @filas == other.filas && @columnas == other.columnas
 			elemento = Array.new
 			@filas.times do |i|
@@ -48,7 +79,8 @@ module LppT04Matrix # Clase Abstracta Matriz
 			MatrizDensa.new(@filas, @columnas,elemento)
 		end
 
-		def -(other)# Resta dos Fracciones se le pasa un tipo fraccion.
+		# Resta dos Fracciones se le pasa un tipo fraccion.
+		def -(other) # Resta dos Fracciones se le pasa un tipo fraccion.
 			raise ArgumentError, "La longitud de las matrices no coincide." unless @filas == other.filas && @columnas == other.columnas
 			elemento = Array.new
 			@filas.times do |i|
@@ -61,6 +93,7 @@ module LppT04Matrix # Clase Abstracta Matriz
 			MatrizDensa.new(@filas, @columnas,elemento)
 		end
 
+		# Multiplica dos Fracciones se le pasa un tipo fraccion.
 		def *(other) # Multiplica dos Fracciones se le pasa un tipo fraccion.
 			raise ArgumentError, "La longitud de las matrices no coincide." unless @columnas == other.filas
 			elemento = Array.new
@@ -80,6 +113,7 @@ module LppT04Matrix # Clase Abstracta Matriz
 			MatrizDensa.new(@filas, other.columnas, elemento)
 		end
 
+		# Devuelve la trasuesta de una Matriz
 		def traspuesta # Devuelve la trasuesta de una Matriz
 			elemento = Array.new
 			@columnas.times do |i|
@@ -91,6 +125,8 @@ module LppT04Matrix # Clase Abstracta Matriz
 			end
 			MatrizDensa.new(@columnas, @filas, elemento)
 		end
+
+		# Devuelve el valor maximo
 		def maximo # Devuelve el valor maximo
 			aux = @elemento[0][0]
 			@columnas.times do |i|
@@ -100,6 +136,8 @@ module LppT04Matrix # Clase Abstracta Matriz
 			end
 			aux
 		end
+
+		# Devuelve el valor minimo.
 		def minimo # Devuelve el valor minimo.
 			aux = @elemento[0][0]
 			@columnas.times do |i|
@@ -111,18 +149,24 @@ module LppT04Matrix # Clase Abstracta Matriz
 		end
 	end
 
-
-	class MatrizDispersa < Matriz # Clase Matriz Dispersa hereda de Matriz
+	# Clase Matriz Dispersa hereda de Matriz
+	class MatrizDispersa < Matriz # Clase Matriz Dispersa hereda de Matriz.
+		# Hash de hashes que guarda los elementos de la matriz por filas y columnas.
 		attr_accessor :elemento
-		def initialize (filas, columnas, elemento)
+		# Contructor de la clase MatrizDispersa
+		def initialize (filas, columnas, elemento) # Contructor de la clase Matriz.
 			super(filas, columnas)
+			# Hash de hashes que guarda los elementos de la matriz por filas y columnas.
     		@elemento = elemento
 		end
 
-		def [](i) # Metodo de acceso a la matriz
+		# Metodo de acceso a la matriz.
+		def [](i) # Metodo de acceso a la matriz.
 			@elemento[i]
  		end
- 		def indice(i,j) #Devuelve el valor del indice i j
+
+ 		# Devuelve el valor del indice i j
+ 		def indice(i,j) # Devuelve el valor del indice i j
  			elemento = @elemento.fetch(i,0)
  			if elemento!= 0
  				elemento.fetch(j,0)
@@ -131,11 +175,13 @@ module LppT04Matrix # Clase Abstracta Matriz
  			end
  		end
 
+ 		# Convierte la fraccion a una cadena
 		def to_s # Convierte la fraccion a una cadena
 			@elemento
 		end
 		
-		def +(other) #Suma dos Fracciones se le pasa un tipo fraccion.
+		# Suma dos Fracciones se le pasa un tipo fraccion.
+		def +(other) # Suma dos Fracciones se le pasa un tipo fraccion.
 			raise ArgumentError, "La longitud de las matrices no coincide." unless @filas == other.filas && @columnas == other.columnas
 			case other
 			when MatrizDensa
@@ -148,6 +194,7 @@ module LppT04Matrix # Clase Abstracta Matriz
 			end
 		end
 
+		# Resta dos Fracciones se le pasa un tipo fraccion.
 		def -(other) # Resta dos Fracciones se le pasa un tipo fraccion.
 			raise ArgumentError, "La longitud de las matrices no coincide." unless @filas == other.filas && @columnas == other.columnas
 			case other
@@ -161,6 +208,7 @@ module LppT04Matrix # Clase Abstracta Matriz
 			end
 		end
 
+		# Multiplica dos Fracciones se le pasa un tipo fraccion.
 		def *(other) # Multiplica dos Fracciones se le pasa un tipo fraccion.
 			raise ArgumentError, "La longitud de las matrices no coincide." unless @columnas == other.filas
 			case other
@@ -194,6 +242,7 @@ module LppT04Matrix # Clase Abstracta Matriz
 			end		
 		end
 
+		# Devuelve la trasuesta de una Matriz
 		def traspuesta  # Devuelve la trasuesta de una Matriz
 			elemento = Hash.new(Hash.new())
 			@elemento.each {
@@ -206,6 +255,8 @@ module LppT04Matrix # Clase Abstracta Matriz
 			elemento
 			MatrizDispersa.new(@filas, @columnas, elemento)
 		end
+
+		# Devuelve el valor maximo
 		def maximo # Devuelve el valor maximo
 			aux = @elemento.keys
 			aux1 = aux[0]
@@ -219,6 +270,8 @@ module LppT04Matrix # Clase Abstracta Matriz
 			}
 			mayor
 		end
+
+		# Devuelve el valor minimo.
 		def minimo # Devuelve el valor minimo.
 			aux = @elemento.keys
 			aux1 = aux[0]
@@ -235,25 +288,32 @@ module LppT04Matrix # Clase Abstracta Matriz
 	end
 end
 
+# Clase para el trabajo con fracciones.
 class Frac
+	# Se definen set y get para acceder a las variables de la clase.
 	attr_reader :numerador, :denominador # Se definen set y get para acceder a las variables de la clase.
+	# Se incluye el modulo de nombre "comparable" utilizado para el operador <=>.
 	include Comparable # Se incluye el modulo de nombre "comparable" utilizado para el operador <=>.
 	
+    # Se define el constructor.
     def initialize(numerador, denominador) # Se define el constructor.
 		mcd = gcd(numerador,denominador)
 		@numerador , @denominador = numerador/mcd, denominador/mcd
 	end
 	
+	# Devuelve el numerador.
     def num() # Devuelve el numerador.
 		@numerador
 	end
 	
+	# Devuelve el denominador.
     def denom() # Devuelve el denominador.
 		@denominador
 	end
 	
+	# Si el denominador es 1, solo se imprimer el numerador
     def to_s
-        if @denominador == 1 #Si el denominador es 1, solo se imprimer el numerador
+        if @denominador == 1 # Si el denominador es 1, solo se imprimer el numerador
                 "#{@numerador}"
         elsif @denominador == -1 #En el caso de que b=-1 y a>0 ó a=-1
                 if @numerador>0 || @numerador==-1
@@ -272,14 +332,17 @@ class Frac
         end        
     end
 	
+	# Imprime el resultado de la fraccion como un float.
     def to_f() # Imprime el resultado de la fraccion como un float.
 		@numerador.to_f/@denominador
 	end
 	
+	# Se define el operador <=> para el modulo comparable.
     def <=>(other) # Se define el operador <=> para el modulo comparable.
     	@numerador.to_f/@denominador <=> other.numerador.to_f/other.denominador
     end
     
+    # Se calcula el valor absoluto de una fraccion.
     def abs() # Se calcula el valor absoluto de una fraccion.
     	if (@numerador > 0 && @denominador > 0)
     		Frac.new(@numerador, @denominador).to_s
@@ -292,10 +355,12 @@ class Frac
     	end  						
     end
     
+    # Calcula el reciproco de una fraccion.
     def reciprocal() # Calcula el reciproco de una fraccion.
     	Frac.new(@denominador, @numerador)
     end
 
+    # Calcula la suma de dos fracciones.
     def +(other) # Calcula la suma de dos fracciones.
         if other.class == Frac
             Frac.new(@numerador*other.denominador + other.numerador*@denominador , @denominador*other.denominador)
@@ -305,6 +370,7 @@ class Frac
                 
     end
 
+    # Calcula la resta de dos fracciones.
     def -(other) # Calcula la resta de dos fracciones.
         if (other.class == Frac)
             Frac.new(@numerador*other.denominador - other.numerador*@denominador , @denominador*other.denominador)
@@ -313,6 +379,7 @@ class Frac
         end
     end
 
+    # Calcula la multiplicacion de dos fracciones.
     def *(other) # Calcula la multiplicacion de dos fracciones.
     	if other.class == Frac
             Frac.new(@numerador * other.numerador, @denominador * other.denominador)
@@ -321,21 +388,25 @@ class Frac
         end
     end
 
+    # Calcula la division de dos fracciones.
     def /(other) # Calcula la division de dos fracciones.
         Frac.new(@numerador * other.denominador, @denominador * other.numerador)
     end
 
+    # Calcula el resto al dividir dos fracciones (modulo)
     def %(other) # Calcula el resto al dividir dos fracciones (modulo)
         result = self./(other)
         result = (result.numerador%result.denominador).to_i
     end
 
-    def coerce(other)
+    # Se define el metodo coerce para operar enteros con fracciones.
+    def coerce(other) # Se define el metodo coerce para operar enteros con fracciones.
     	[self,other]
     end
 end
 
-def gcd(u, v)
+# Metodo que calculo el maximo comun divisor de dos numeros.
+def gcd(u, v) # Metedo que calculo el maximo comun divisor de dos numeros.
   u, v = u.abs, v.abs
   while v != 0
     u, v = v, u % v
@@ -343,8 +414,9 @@ def gcd(u, v)
   u
 end
 
-if __FILE__ == $0
 # Trabajo con la clase:
+if __FILE__ == $0
+
 include LppT04Matrix
 
 m1 = MatrizDensa.new(2,2,[[1,2],[3,4]])
