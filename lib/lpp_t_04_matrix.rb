@@ -1,3 +1,11 @@
+# == Fichero que contiene la gema para el trabajo con matrices.
+#
+# Operacion con matrices densas y dispersas.
+#
+# Authors: Eliezer Cruz Suarez, Carlos Barreda Falciano
+#
+# Email: alu0100611298@ull.edu.es, alu0100596113@ull.edu.es
+#
 require "lpp_t_04_matrix/version"
 
 # == Modulo que contiene la gema para el trabajo con matrices.
@@ -116,9 +124,9 @@ module LppT04Matrix
 		# Devuelve la trasuesta de una Matriz
 		def traspuesta # Devuelve la trasuesta de una Matriz
 			elemento = Array.new
-			@columnas.times do |i|
+			0.upto(@columnas - 1) do |i|
 				elemento_fila = Array.new
-				@filas.times do |j|
+				0.upto(@filas - 1) do |j|
 					elemento_fila << @elemento[j][i]
 				end
 				elemento << elemento_fila
@@ -403,45 +411,13 @@ class Frac
     def coerce(other) # Se define el metodo coerce para operar enteros con fracciones.
     	[self,other]
     end
-end
 
-# Metodo que calculo el maximo comun divisor de dos numeros.
-def gcd(u, v) # Metedo que calculo el maximo comun divisor de dos numeros.
-  u, v = u.abs, v.abs
-  while v != 0
-    u, v = v, u % v
-  end
-  u
-end
-
-# Trabajo con la clase:
-if __FILE__ == $0
-
-include LppT04Matrix
-
-m1 = MatrizDensa.new(2,2,[[1,2],[3,4]])
-m2 = MatrizDispersa.new(2, 2, {0 => {0 => 1, 1 => 2}, 1 => {0 => 3, 1 => 4}})
-m3 = MatrizDensa.new(2,2,[[7,10],[15,22]])
-m4 = MatrizDispersa.new(2, 2, {0 => {0 => Frac.new(1,2), 1 => Frac.new(1,2)}, 1 => {0 => Frac.new(1,2), 1 => Frac.new(1,2)}})
-a = Frac.new(1,2)
-b = Frac.new(2,2)
-c = Frac.new(3,2)
-d = Frac.new(4,2)
-e = Frac.new(3,2)
-f = Frac.new(9,2)
-g = Frac.new(3,1)
-h = Frac.new(6,1)
-m9 = MatrizDensa.new(2,2,[[a,b],[c,d]])
-m10 = MatrizDensa.new(2,2,[[e,3],[f,6]])
-puts m9-(m1)
-puts
-puts m1-(m9)
-puts 
-puts m4.to_s
-puts m4*m1
-puts m1*m4
-puts m1*m1
-puts (m2*m4).to_s
-puts (m4*m2).to_s
-puts m1
+    # Metodo que calculo el maximo comun divisor de dos numeros.
+	def gcd(u, v) # Metedo que calculo el maximo comun divisor de dos numeros.
+	  u, v = u.abs, v.abs
+	  while v != 0
+	    u, v = v, u % v
+	  end
+	  u
+	end
 end
