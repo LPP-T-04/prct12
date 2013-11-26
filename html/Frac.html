@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class Frac - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/lpp_t_04_matrix.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
+
+    <!-- Included Modules -->
+<nav id="includes-section" class="section">
+  <h3 class="section-header">Included Modules</h3>
+
+  <ul class="link-list">
+  
+  
+    <li><span class="include">Comparable</span>
+  
+  
+  </ul>
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-25">#%</a>
+    
+    <li ><a href="#method-i-2A">#*</a>
+    
+    <li ><a href="#method-i-2B">#+</a>
+    
+    <li ><a href="#method-i-2D">#-</a>
+    
+    <li ><a href="#method-i-2F">#/</a>
+    
+    <li ><a href="#method-i-3C-3D-3E">#&lt;=&gt;</a>
+    
+    <li ><a href="#method-i-abs">#abs</a>
+    
+    <li ><a href="#method-i-coerce">#coerce</a>
+    
+    <li ><a href="#method-i-denom">#denom</a>
+    
+    <li ><a href="#method-i-gcd">#gcd</a>
+    
+    <li ><a href="#method-i-num">#num</a>
+    
+    <li ><a href="#method-i-reciprocal">#reciprocal</a>
+    
+    <li ><a href="#method-i-to_f">#to_f</a>
+    
+    <li ><a href="#method-i-to_s">#to_s</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./README_md.html">README</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Frac.html">Frac</a>
+  
+    <li><a href="./LppT04Matrix.html">LppT04Matrix</a>
+  
+    <li><a href="./LppT04Matrix/Matriz.html">LppT04Matrix::Matriz</a>
+  
+    <li><a href="./LppT04Matrix/MatrizDensa.html">LppT04Matrix::MatrizDensa</a>
+  
+    <li><a href="./LppT04Matrix/MatrizDispersa.html">LppT04Matrix::MatrizDispersa</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Frac</h1>
+
+  <div id="description" class="description">
+    
+<p>Clase para el trabajo con fracciones.</p>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+    <!-- Attributes -->
+    <section id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
+
+      
+      <div id="attribute-i-denominador" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">denominador</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>Se definen set y get para acceder a las variables de la clase.</p>
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-numerador" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">numerador</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>Se definen set y get para acceder a las variables de la clase.</p>
+        
+        </div>
+      </div>
+      
+    </section><!-- attribute-method-details -->
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(numerador, denominador)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Se define el constructor.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/lpp_t_04_matrix.rb, line 307</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">numerador</span>, <span class="ruby-identifier">denominador</span>) <span class="ruby-comment"># Se define el constructor.</span>
+            <span class="ruby-identifier">mcd</span> = <span class="ruby-identifier">gcd</span>(<span class="ruby-identifier">numerador</span>,<span class="ruby-identifier">denominador</span>)
+            <span class="ruby-ivar">@numerador</span> , <span class="ruby-ivar">@denominador</span> = <span class="ruby-identifier">numerador</span><span class="ruby-operator">/</span><span class="ruby-identifier">mcd</span>, <span class="ruby-identifier">denominador</span><span class="ruby-operator">/</span><span class="ruby-identifier">mcd</span>
+    <span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-25" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">%</span><span
+            class="method-args">(other)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Calcula el resto al dividir dos fracciones (modulo)</p>
+          
+          
+
+          
+          <div class="method-source-code" id="25-source">
+            <pre><span class="ruby-comment"># File lib/lpp_t_04_matrix.rb, line 405</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">%</span>(<span class="ruby-identifier">other</span>) <span class="ruby-comment"># Calcula el resto al dividir dos fracciones (modulo)</span>
+    <span class="ruby-identifier">result</span> = <span class="ruby-keyword">self</span>.<span class="ruby-operator">/</span>(<span class="ruby-identifier">other</span>)
+    <span class="ruby-identifier">result</span> = (<span class="ruby-identifier">result</span>.<span class="ruby-identifier">numerador</span><span class="ruby-operator">%</span><span class="ruby-identifier">result</span>.<span class="ruby-identifier">denominador</span>).<span class="ruby-identifier">to_i</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 25-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 25-method -->
+
+    
+      <div id="method-i-2A" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">*</span><span
+            class="method-args">(other)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Calcula la multiplicacion de dos fracciones.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="2A-source">
+            <pre><span class="ruby-comment"># File lib/lpp_t_04_matrix.rb, line 391</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">*</span>(<span class="ruby-identifier">other</span>) <span class="ruby-comment"># Calcula la multiplicacion de dos fracciones.</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Frac</span>
+        <span class="ruby-constant">Frac</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@numerador</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">numerador</span>, <span class="ruby-ivar">@denominador</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">denominador</span>)
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Fixnum</span>
+        <span class="ruby-constant">Frac</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@numerador</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">other</span>, <span class="ruby-ivar">@denominador</span>)
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 2A-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2A-method -->
+
+    
+      <div id="method-i-2B" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">+</span><span
+            class="method-args">(other)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Calcula la suma de dos fracciones.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="2B-source">
+            <pre><span class="ruby-comment"># File lib/lpp_t_04_matrix.rb, line 372</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">+</span>(<span class="ruby-identifier">other</span>) <span class="ruby-comment"># Calcula la suma de dos fracciones.</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Frac</span>
+        <span class="ruby-constant">Frac</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@numerador</span><span class="ruby-operator">*</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">denominador</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">numerador</span><span class="ruby-operator">*</span><span class="ruby-ivar">@denominador</span> , <span class="ruby-ivar">@denominador</span><span class="ruby-operator">*</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">denominador</span>)
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Fixnum</span>
+        <span class="ruby-constant">Frac</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@numerador</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">other</span><span class="ruby-operator">*</span><span class="ruby-ivar">@denominador</span> , <span class="ruby-ivar">@denominador</span>)
+    <span class="ruby-keyword">end</span>
+            
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 2B-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2B-method -->
+
+    
+      <div id="method-i-2D" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">-</span><span
+            class="method-args">(other)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Calcula la resta de dos fracciones.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="2D-source">
+            <pre><span class="ruby-comment"># File lib/lpp_t_04_matrix.rb, line 382</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">-</span>(<span class="ruby-identifier">other</span>) <span class="ruby-comment"># Calcula la resta de dos fracciones.</span>
+    <span class="ruby-keyword">if</span> (<span class="ruby-identifier">other</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Frac</span>)
+        <span class="ruby-constant">Frac</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@numerador</span><span class="ruby-operator">*</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">denominador</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">numerador</span><span class="ruby-operator">*</span><span class="ruby-ivar">@denominador</span> , <span class="ruby-ivar">@denominador</span><span class="ruby-operator">*</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">denominador</span>)
+    <span class="ruby-keyword">else</span>
+            <span class="ruby-constant">Frac</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@numerador</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">other</span><span class="ruby-operator">*</span><span class="ruby-ivar">@denominador</span> , <span class="ruby-ivar">@denominador</span>)
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 2D-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2D-method -->
+
+    
+      <div id="method-i-2F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">/</span><span
+            class="method-args">(other)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Calcula la division de dos fracciones.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="2F-source">
+            <pre><span class="ruby-comment"># File lib/lpp_t_04_matrix.rb, line 400</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">/</span>(<span class="ruby-identifier">other</span>) <span class="ruby-comment"># Calcula la division de dos fracciones.</span>
+    <span class="ruby-constant">Frac</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@numerador</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">denominador</span>, <span class="ruby-ivar">@denominador</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">numerador</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 2F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2F-method -->
+
+    
+      <div id="method-i-3C-3D-3E" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">&lt;=&gt;</span><span
+            class="method-args">(other)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Se define el operador &lt;=&gt; para el modulo comparable.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="3C-3D-3E-source">
+            <pre><span class="ruby-comment"># File lib/lpp_t_04_matrix.rb, line 349</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">&lt;=&gt;</span>(<span class="ruby-identifier">other</span>) <span class="ruby-comment"># Se define el operador &lt;=&gt; para el modulo comparable.</span>
+    <span class="ruby-ivar">@numerador</span>.<span class="ruby-identifier">to_f</span><span class="ruby-operator">/</span><span class="ruby-ivar">@denominador</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">numerador</span>.<span class="ruby-identifier">to_f</span><span class="ruby-operator">/</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">denominador</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 3C-3D-3E-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 3C-3D-3E-method -->
+
+    
+      <div id="method-i-abs" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">abs</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Se calcula el valor absoluto de una fraccion.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="abs-source">
+            <pre><span class="ruby-comment"># File lib/lpp_t_04_matrix.rb, line 354</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">abs</span>() <span class="ruby-comment"># Se calcula el valor absoluto de una fraccion.</span>
+    <span class="ruby-keyword">if</span> (<span class="ruby-ivar">@numerador</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@denominador</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>)
+            <span class="ruby-constant">Frac</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@numerador</span>, <span class="ruby-ivar">@denominador</span>).<span class="ruby-identifier">to_s</span>
+    <span class="ruby-keyword">elsif</span> (<span class="ruby-ivar">@numerador</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@denominador</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>)
+            <span class="ruby-constant">Frac</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@numerador</span>, <span class="ruby-value">-1</span> <span class="ruby-operator">*</span> <span class="ruby-ivar">@denominador</span>).<span class="ruby-identifier">to_s</span>
+    <span class="ruby-keyword">elsif</span> (<span class="ruby-ivar">@numerador</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@denominador</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>)
+            <span class="ruby-constant">Frac</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">-1</span> <span class="ruby-operator">*</span> <span class="ruby-ivar">@numerador</span>, <span class="ruby-ivar">@denominador</span>).<span class="ruby-identifier">to_s</span>
+    <span class="ruby-keyword">else</span> (<span class="ruby-ivar">@numerador</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@denominador</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>)
+            <span class="ruby-constant">Frac</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">-1</span> <span class="ruby-operator">*</span> <span class="ruby-ivar">@numerador</span>,<span class="ruby-value">-1</span> <span class="ruby-operator">*</span> <span class="ruby-ivar">@denominador</span>).<span class="ruby-identifier">to_s</span>
+    <span class="ruby-keyword">end</span>                                                
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- abs-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- abs-method -->
+
+    
+      <div id="method-i-coerce" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">coerce</span><span
+            class="method-args">(other)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Se define el metodo coerce para operar enteros con fracciones.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="coerce-source">
+            <pre><span class="ruby-comment"># File lib/lpp_t_04_matrix.rb, line 411</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">coerce</span>(<span class="ruby-identifier">other</span>) <span class="ruby-comment"># Se define el metodo coerce para operar enteros con fracciones.</span>
+    [<span class="ruby-keyword">self</span>,<span class="ruby-identifier">other</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- coerce-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- coerce-method -->
+
+    
+      <div id="method-i-denom" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">denom</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Devuelve el denominador.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="denom-source">
+            <pre><span class="ruby-comment"># File lib/lpp_t_04_matrix.rb, line 318</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">denom</span>() <span class="ruby-comment"># Devuelve el denominador.</span>
+            <span class="ruby-ivar">@denominador</span>
+    <span class="ruby-keyword">end</span></pre>
+          </div><!-- denom-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- denom-method -->
+
+    
+      <div id="method-i-gcd" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">gcd</span><span
+            class="method-args">(u, v)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Metodo que calculo el maximo comun divisor de dos numeros.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="gcd-source">
+            <pre><span class="ruby-comment"># File lib/lpp_t_04_matrix.rb, line 416</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">gcd</span>(<span class="ruby-identifier">u</span>, <span class="ruby-identifier">v</span>) <span class="ruby-comment"># Metedo que calculo el maximo comun divisor de dos numeros.</span>
+  <span class="ruby-identifier">u</span>, <span class="ruby-identifier">v</span> = <span class="ruby-identifier">u</span>.<span class="ruby-identifier">abs</span>, <span class="ruby-identifier">v</span>.<span class="ruby-identifier">abs</span>
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">v</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">u</span>, <span class="ruby-identifier">v</span> = <span class="ruby-identifier">v</span>, <span class="ruby-identifier">u</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">v</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">u</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- gcd-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- gcd-method -->
+
+    
+      <div id="method-i-num" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">num</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Devuelve el numerador.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="num-source">
+            <pre><span class="ruby-comment"># File lib/lpp_t_04_matrix.rb, line 313</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">num</span>() <span class="ruby-comment"># Devuelve el numerador.</span>
+            <span class="ruby-ivar">@numerador</span>
+    <span class="ruby-keyword">end</span></pre>
+          </div><!-- num-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- num-method -->
+
+    
+      <div id="method-i-reciprocal" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">reciprocal</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Calcula el reciproco de una fraccion.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="reciprocal-source">
+            <pre><span class="ruby-comment"># File lib/lpp_t_04_matrix.rb, line 367</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">reciprocal</span>() <span class="ruby-comment"># Calcula el reciproco de una fraccion.</span>
+    <span class="ruby-constant">Frac</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@denominador</span>, <span class="ruby-ivar">@numerador</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- reciprocal-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- reciprocal-method -->
+
+    
+      <div id="method-i-to_f" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_f</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Imprime el resultado de la fraccion como un float.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="to_f-source">
+            <pre><span class="ruby-comment"># File lib/lpp_t_04_matrix.rb, line 344</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_f</span>() <span class="ruby-comment"># Imprime el resultado de la fraccion como un float.</span>
+            <span class="ruby-ivar">@numerador</span>.<span class="ruby-identifier">to_f</span><span class="ruby-operator">/</span><span class="ruby-ivar">@denominador</span>
+    <span class="ruby-keyword">end</span></pre>
+          </div><!-- to_f-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- to_f-method -->
+
+    
+      <div id="method-i-to_s" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_s</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Si el denominador es 1, solo se imprimer el numerador</p>
+          
+          
+
+          
+          <div class="method-source-code" id="to_s-source">
+            <pre><span class="ruby-comment"># File lib/lpp_t_04_matrix.rb, line 323</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_s</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@denominador</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span> <span class="ruby-comment"># Si el denominador es 1, solo se imprimer el numerador</span>
+            <span class="ruby-node">&quot;#{@numerador}&quot;</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@denominador</span> <span class="ruby-operator">==</span> <span class="ruby-value">-1</span> <span class="ruby-comment">#En el caso de que b=-1 y a&gt;0 ó a=-1</span>
+            <span class="ruby-keyword">if</span> <span class="ruby-ivar">@numerador</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@numerador</span><span class="ruby-operator">==</span><span class="ruby-value">-1</span>
+                    <span class="ruby-node">&quot;#{-@numerador}&quot;</span>
+            <span class="ruby-keyword">else</span> <span class="ruby-comment">#Si b=-1 y a es menor que cero, imprime el valor de a</span>
+                    <span class="ruby-node">&quot;#{@numerador}&quot;</span>
+            <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">elsif</span> (<span class="ruby-ivar">@numerador</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@denominador</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@denominador</span><span class="ruby-operator">!=</span><span class="ruby-value">1</span>) <span class="ruby-comment">#Caso nomal, a y b son mayores que cero, imprime a/b</span>
+            <span class="ruby-node">&quot;#{@numerador}/#{@denominador}&quot;</span>
+    <span class="ruby-keyword">elsif</span> (<span class="ruby-ivar">@numerador</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@denominador</span><span class="ruby-operator">&lt;</span><span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@denominador</span><span class="ruby-operator">!=</span><span class="ruby-value">-1</span>) <span class="ruby-comment"># b es menor que cero, se le cambia el signo a todo para que se imprima: -a/b</span>
+            <span class="ruby-node">&quot;#{-@numerador}/#{-@denominador}&quot;</span>
+    <span class="ruby-keyword">elsif</span> (<span class="ruby-ivar">@numerador</span><span class="ruby-operator">&lt;</span><span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@denominador</span><span class="ruby-operator">&lt;</span><span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@denominador</span><span class="ruby-operator">!=</span><span class="ruby-value">-1</span>) <span class="ruby-comment"># a y b son menor que cero, se le cambia el signo a todo para que imprima a/b</span>
+            <span class="ruby-node">&quot;#{-@numerador}/#{-@denominador}&quot;</span>
+    <span class="ruby-keyword">elsif</span> (<span class="ruby-ivar">@numerador</span><span class="ruby-operator">&lt;</span><span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@denominador</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@denominador</span><span class="ruby-operator">!=</span><span class="ruby-value">1</span>) <span class="ruby-comment"># a es menor que cero, se imprime igual: -a/b</span>
+            <span class="ruby-node">&quot;#{@numerador}/#{@denominador}&quot;</span>
+    <span class="ruby-keyword">end</span>        
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- to_s-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- to_s-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.1.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

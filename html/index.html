@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body>
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./README_md.html">README</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Frac.html">Frac</a>
+  
+    <li><a href="./LppT04Matrix.html">LppT04Matrix</a>
+  
+    <li><a href="./LppT04Matrix/Matriz.html">LppT04Matrix::Matriz</a>
+  
+    <li><a href="./LppT04Matrix/MatrizDensa.html">LppT04Matrix::MatrizDensa</a>
+  
+    <li><a href="./LppT04Matrix/MatrizDispersa.html">LppT04Matrix::MatrizDispersa</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation" class="description">
+
+<h1 id="label-LppT04Matrix"><a href="LppT04Matrix.html">LppT04Matrix</a><span><a href="#label-LppT04Matrix">&para;</a> <a href="#documentation">&uarr;</a></span></h1>
+
+<p>:~/LPP/prct09/tree<br> .<br> ├── Gemfile<br> ├── Gemfile.lock<br> ├──
+Guardfile<br> ├── lib<br> │ ├── lpp_t_04_matrix<br> │ │ └── version.rb<br>
+│ └── lpp_t_04_matrix.rb<br> ├── LICENSE.txt<br> ├──
+lpp_t_04_matrix.gemspec<br> ├── Rakefile<br> ├── README.md<br> └── spec<br>
+├── lpp_t_04_matrix_spec.rb<br>  └── spec_helper.rb</p>
+
+<h2 id="label-Descripci%C3%B3n+de+los+objetivos+de+la+pr%C3%A1ctica">Descripción de los objetivos de la práctica<span><a href="#label-Descripci%C3%B3n+de+los+objetivos+de+la+pr%C3%A1ctica">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<p>Para realización de esta práctica se ha creado una jerarquía de
+clases.Teniendo en cuenta que tenemos una clase abstracta de nombre Matriz,
+y de la cual han heredado las otras dos clases que definen el tipo de
+objetos que tenemos, MatrizDensa y MatrizDispersa, se han implementado los
+métodos para operar con ambos tipos de matrices sin importar que objeto
+sea. Además se ha incluido el tratamiento de fracciones desarrollado en la
+práctica anterior con la idea de que la matriz sea capaz de operar con
+elementos del tipo Franction. Los métodos implemnetados son:<br>  Suma,
+Resta, Multiplicación y Traspuesta.<br> <em>*</em></p>
+
+<h2 id="label-Jerarqu%C3%ADa+de+clases+para+la+creaci%C3%B3n+las+matrices%3A">Jerarquía de clases para la creación las matrices:<span><a href="#label-Jerarqu%C3%ADa+de+clases+para+la+creaci%C3%B3n+las+matrices%3A">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<p>class Matriz&lt;pre&gt;  @filas  @columnas &lt;/pre&gt; end</p>
+
+<p>Class MatrizDensa &lt; Matriz &lt;pre&gt; #Se definen los métodos que
+trabajan con matrices densas &lt;/pre&gt; end</p>
+
+<p>Class MatrizDispersa &lt; Matriz &lt;pre&gt; #Se definen los métodos que
+trabajan con matrices dispersas &lt;/pre&gt; end</p>
+
+<h2 id="label-Trabajo+con+matrices">Trabajo con matrices<span><a href="#label-Trabajo+con+matrices">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<p>Un ejemplo de como construiremos una matriz densa es:<br> m3 = <a
+href="http://7,10">MatrizDensa.new(2,2,[</a>,[15,22]])<br> Deberemos llamar
+a la clase MatrizDensa.<br> Los dos primero parametros son el número de
+filas y el número de columnas.<br> A continuación se le pasa un arrary que
+contiene todos los elementos de la matriz.</p>
+
+<p>Un ejemplo de como construiremos una matriz dispersa es:<br> m2 =
+MatrizDispersa.new(2, 2, {0 =&gt; {0 =&gt; 1, 1 =&gt; 2}, 1 =&gt; {0 =&gt;
+3, 1 =&gt; 4}})<br> Se llama a la clase MatrizDispersa.<br> Los dos primero
+parametros son el número de filas y el número de columnas.<br> A
+continuación se le pasa un hash que contiene los elementos no nulos de la
+matriz del tipo:<br> [FILA] =&gt; {[COLUMNA] =&gt; [VALOR], [COLUMNA] =&gt;
+[VALOR], …}, …</p>
+
+<p>Un ejemplo de como construiremos una fracción es:<br> a = <a
+href="Frac.html#method-c-new">Frac.new</a>(1,2) Se llama a la clase <a
+href="Frac.html">Frac</a>.<br> El primer parámetro que se le pasa es el
+numerador y el sgundo el denominador.</p>
+
+<h2 id="label-Installation">Installation<span><a href="#label-Installation">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<p>Add this line to your application’s Gemfile:</p>
+
+<pre>gem 'lpp_t_04_matrix'</pre>
+
+<p>And then execute:</p>
+
+<pre>$ bundle</pre>
+
+<p>Or install it yourself as:</p>
+
+<pre>$ gem install lpp_t_04_matrix</pre>
+
+<h2 id="label-Usage">Usage<span><a href="#label-Usage">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<pre class="ruby">    <span class="ruby-identifier">require</span> <span class="ruby-string">'lpp_t_04_matrix'</span>
+    <span class="ruby-identifier">include</span> <span class="ruby-constant">LppT04Matrix</span>
+
+<span class="ruby-constant">Para</span> <span class="ruby-identifier">operar</span> <span class="ruby-identifier">con</span> <span class="ruby-identifier">matrices</span> <span class="ruby-identifier">se</span> <span class="ruby-identifier">definen</span> <span class="ruby-identifier">los</span> <span class="ruby-identifier">siguientes</span> <span class="ruby-identifier">métodos</span><span class="ruby-operator">:</span>
+<span class="ruby-identifier">m1</span> = <span class="ruby-constant">MatrizDensa</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">2</span>,<span class="ruby-value">2</span>,[[<span class="ruby-value">7</span>,<span class="ruby-value">10</span>],[<span class="ruby-value">15</span>,<span class="ruby-value">22</span>]])
+<span class="ruby-identifier">m2</span> = <span class="ruby-constant">MatrizDispersa</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">2</span>, <span class="ruby-value">2</span>, {<span class="ruby-value">0</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">0</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>}, <span class="ruby-value">1</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">0</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">3</span>, <span class="ruby-value">1</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">4</span>}})
+<span class="ruby-constant">Suma</span><span class="ruby-operator">:</span> <span class="ruby-constant">Se</span> <span class="ruby-identifier">denomina</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">y</span> <span class="ruby-identifier">se</span> <span class="ruby-identifier">la</span> <span class="ruby-identifier">pasa</span> <span class="ruby-identifier">un</span> <span class="ruby-identifier">objeto</span> <span class="ruby-identifier">matriz</span>.
+<span class="ruby-constant">Ejemplo</span><span class="ruby-operator">:</span> <span class="ruby-identifier">m1</span><span class="ruby-operator">+</span><span class="ruby-identifier">m2</span>
+<span class="ruby-constant">Resta</span><span class="ruby-operator">:</span> <span class="ruby-constant">Se</span> <span class="ruby-identifier">denomina</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">y</span> <span class="ruby-identifier">se</span> <span class="ruby-identifier">la</span> <span class="ruby-identifier">pasa</span> <span class="ruby-identifier">un</span> <span class="ruby-identifier">objeto</span> <span class="ruby-identifier">matriz</span>.
+<span class="ruby-constant">Ejemplo</span><span class="ruby-operator">:</span> <span class="ruby-identifier">m1</span><span class="ruby-operator">-</span><span class="ruby-identifier">m2</span>
+<span class="ruby-constant">Multiplicación</span><span class="ruby-operator">:</span> <span class="ruby-constant">Se</span> <span class="ruby-identifier">denomina</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">y</span> <span class="ruby-identifier">se</span> <span class="ruby-identifier">la</span> <span class="ruby-identifier">pasa</span> <span class="ruby-identifier">un</span> <span class="ruby-identifier">objeto</span> <span class="ruby-identifier">matriz</span>.
+<span class="ruby-constant">Ejemplo</span><span class="ruby-operator">:</span> <span class="ruby-identifier">m1</span><span class="ruby-operator">*</span><span class="ruby-identifier">m2</span>
+<span class="ruby-constant">Máximo</span><span class="ruby-operator">:</span> <span class="ruby-constant">Se</span> <span class="ruby-identifier">denomina</span> <span class="ruby-identifier">maximo</span> <span class="ruby-identifier">devuelve</span> <span class="ruby-identifier">el</span> <span class="ruby-identifier">valor</span> <span class="ruby-identifier">del</span> <span class="ruby-identifier">máximo</span>.
+<span class="ruby-constant">Ejemplo</span><span class="ruby-operator">:</span> <span class="ruby-identifier">m1</span>.<span class="ruby-identifier">maximo</span>
+<span class="ruby-constant">Mínimo</span><span class="ruby-operator">:</span> <span class="ruby-constant">Se</span> <span class="ruby-identifier">denomina</span> <span class="ruby-identifier">maximo</span> <span class="ruby-identifier">devuelve</span> <span class="ruby-identifier">el</span> <span class="ruby-identifier">valor</span> <span class="ruby-identifier">del</span> <span class="ruby-constant">Mínimo</span>.
+<span class="ruby-constant">Ejemplo</span><span class="ruby-operator">:</span> <span class="ruby-identifier">m1</span>.<span class="ruby-identifier">minimo</span>
+</pre>
+
+<h2 id="label-Contributing">Contributing<span><a href="#label-Contributing">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+<ol><li>
+<p>Fork it</p>
+</li><li>
+<p>Create your feature branch (<code>git checkout -b my-new-feature</code>)</p>
+</li><li>
+<p>Commit your changes (<code>git commit -am 'Add some feature'</code>)</p>
+</li><li>
+<p>Push to the branch (<code>git push origin my-new-feature</code>)</p>
+</li><li>
+<p>Create new Pull Request</p>
+</li></ol>
+
+<p><a href="https://travis-ci.org/LPP-T-04/prct09.png?branch=master">{Build
+Status</a>]</p>
+</div>
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.1.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

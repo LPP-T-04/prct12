@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class LppT04Matrix::MatrizDensa - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/lpp_t_04_matrix.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="Matriz.html">LppT04Matrix::Matriz</a>
+  
+</nav>
+
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li class="calls-super" ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-2A">#*</a>
+    
+    <li ><a href="#method-i-2B">#+</a>
+    
+    <li ><a href="#method-i-2D">#-</a>
+    
+    <li ><a href="#method-i-5B-5D">#[]</a>
+    
+    <li ><a href="#method-i-indice">#indice</a>
+    
+    <li ><a href="#method-i-maximo">#maximo</a>
+    
+    <li ><a href="#method-i-minimo">#minimo</a>
+    
+    <li ><a href="#method-i-to_s">#to_s</a>
+    
+    <li ><a href="#method-i-traspuesta">#traspuesta</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../README_md.html">README</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../Frac.html">Frac</a>
+  
+    <li><a href="../LppT04Matrix.html">LppT04Matrix</a>
+  
+    <li><a href="../LppT04Matrix/Matriz.html">LppT04Matrix::Matriz</a>
+  
+    <li><a href="../LppT04Matrix/MatrizDensa.html">LppT04Matrix::MatrizDensa</a>
+  
+    <li><a href="../LppT04Matrix/MatrizDispersa.html">LppT04Matrix::MatrizDispersa</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class LppT04Matrix::MatrizDensa</h1>
+
+  <div id="description" class="description">
+    
+<p>Clase <a href="Matriz.html">Matriz</a> Densa hereda de <a
+href="Matriz.html">Matriz</a></p>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+    <!-- Attributes -->
+    <section id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
+
+      
+      <div id="attribute-i-elemento" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">elemento</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>Vector en el que se almacena el valor de los elementos de la matriz.</p>
+        
+        </div>
+      </div>
+      
+    </section><!-- attribute-method-details -->
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(filas, columnas, elemento)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Contructor de la clase <a href="MatrizDensa.html">MatrizDensa</a></p>
+          
+          
+            <div class="method-calls-super">
+              Calls superclass method
+              <a href="Matriz.html#method-c-new">LppT04Matrix::Matriz.new</a>
+            </div>
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/lpp_t_04_matrix.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span> (<span class="ruby-identifier">filas</span>, <span class="ruby-identifier">columnas</span>, <span class="ruby-identifier">elemento</span>) <span class="ruby-comment"># Contructor de la clase MatrizDensa</span>
+        <span class="ruby-keyword">super</span>(<span class="ruby-identifier">filas</span>, <span class="ruby-identifier">columnas</span>)
+        <span class="ruby-comment"># Vector en el que se almacena el valor de los elementos de la matriz.</span>
+        <span class="ruby-ivar">@elemento</span> = <span class="ruby-identifier">elemento</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-2A" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">*</span><span
+            class="method-args">(other)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Multiplica dos Fracciones se le pasa un tipo fraccion.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="2A-source">
+            <pre><span class="ruby-comment"># File lib/lpp_t_04_matrix.rb, line 105</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">*</span>(<span class="ruby-identifier">other</span>) <span class="ruby-comment"># Multiplica dos Fracciones se le pasa un tipo fraccion.</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;La longitud de las matrices no coincide.&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@columnas</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">filas</span>
+        <span class="ruby-identifier">elemento</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-identifier">acumulado</span> = <span class="ruby-value">0</span>
+        <span class="ruby-ivar">@filas</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">elemento_fila</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+                <span class="ruby-identifier">other</span>.<span class="ruby-identifier">columnas</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
+                        <span class="ruby-identifier">acumulado</span> = <span class="ruby-value">0</span>
+                        <span class="ruby-ivar">@columnas</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">k</span><span class="ruby-operator">|</span>
+                                <span class="ruby-identifier">suma</span> =  <span class="ruby-ivar">@elemento</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">k</span>] <span class="ruby-operator">*</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">indice</span>(<span class="ruby-identifier">k</span>,<span class="ruby-identifier">j</span>)
+                                <span class="ruby-identifier">acumulado</span> = <span class="ruby-identifier">suma</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">acumulado</span>
+                        <span class="ruby-keyword">end</span>
+                        <span class="ruby-identifier">elemento_fila</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">acumulado</span>
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-identifier">elemento</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">elemento_fila</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-constant">MatrizDensa</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@filas</span>, <span class="ruby-identifier">other</span>.<span class="ruby-identifier">columnas</span>, <span class="ruby-identifier">elemento</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 2A-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2A-method -->
+
+    
+      <div id="method-i-2B" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">+</span><span
+            class="method-args">(other)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Suma dos Fracciones se le pasa un tipo fraccion.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="2B-source">
+            <pre><span class="ruby-comment"># File lib/lpp_t_04_matrix.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">+</span>(<span class="ruby-identifier">other</span>) <span class="ruby-comment"># Suma dos Fracciones se le pasa un tipo fraccion.</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;La longitud de las matrices no coincide.&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@filas</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">filas</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@columnas</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">columnas</span>
+        <span class="ruby-identifier">elemento</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-ivar">@filas</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">elemento_fila</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+                <span class="ruby-ivar">@columnas</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
+                        <span class="ruby-identifier">elemento_fila</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@elemento</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>].<span class="ruby-operator">+</span>(<span class="ruby-identifier">other</span>.<span class="ruby-identifier">elemento</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>])
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-identifier">elemento</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">elemento_fila</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-constant">MatrizDensa</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@filas</span>, <span class="ruby-ivar">@columnas</span>,<span class="ruby-identifier">elemento</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 2B-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2B-method -->
+
+    
+      <div id="method-i-2D" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">-</span><span
+            class="method-args">(other)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Resta dos Fracciones se le pasa un tipo fraccion.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="2D-source">
+            <pre><span class="ruby-comment"># File lib/lpp_t_04_matrix.rb, line 91</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">-</span>(<span class="ruby-identifier">other</span>) <span class="ruby-comment"># Resta dos Fracciones se le pasa un tipo fraccion.</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;La longitud de las matrices no coincide.&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@filas</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">filas</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@columnas</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">columnas</span>
+        <span class="ruby-identifier">elemento</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-ivar">@filas</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">elemento_fila</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+                <span class="ruby-ivar">@columnas</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
+                        <span class="ruby-identifier">elemento_fila</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@elemento</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>] <span class="ruby-operator">-</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">elemento</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>]
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-identifier">elemento</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">elemento_fila</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-constant">MatrizDensa</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@filas</span>, <span class="ruby-ivar">@columnas</span>,<span class="ruby-identifier">elemento</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 2D-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2D-method -->
+
+    
+      <div id="method-i-5B-5D" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">[]</span><span
+            class="method-args">(i)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Metodo de acceso a la matriz</p>
+          
+          
+
+          
+          <div class="method-source-code" id="5B-5D-source">
+            <pre><span class="ruby-comment"># File lib/lpp_t_04_matrix.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">[]</span>(<span class="ruby-identifier">i</span>) <span class="ruby-comment"># Metodo de acceso a la matriz</span>
+        <span class="ruby-ivar">@elemento</span>[<span class="ruby-identifier">i</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 5B-5D-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 5B-5D-method -->
+
+    
+      <div id="method-i-indice" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">indice</span><span
+            class="method-args">(i,j)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Devuelve el valor del indice i j</p>
+          
+          
+
+          
+          <div class="method-source-code" id="indice-source">
+            <pre><span class="ruby-comment"># File lib/lpp_t_04_matrix.rb, line 60</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">indice</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>) <span class="ruby-comment"># Devuelve el valor del indice i j</span>
+        <span class="ruby-ivar">@elemento</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- indice-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- indice-method -->
+
+    
+      <div id="method-i-maximo" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">maximo</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Devuelve el valor maximo</p>
+          
+          
+
+          
+          <div class="method-source-code" id="maximo-source">
+            <pre><span class="ruby-comment"># File lib/lpp_t_04_matrix.rb, line 138</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">maximo</span> <span class="ruby-comment"># Devuelve el valor maximo</span>
+        <span class="ruby-identifier">aux</span> = <span class="ruby-ivar">@elemento</span>[<span class="ruby-value">0</span>][<span class="ruby-value">0</span>]
+        <span class="ruby-ivar">@columnas</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+                <span class="ruby-ivar">@filas</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
+                        <span class="ruby-identifier">aux</span> = <span class="ruby-ivar">@elemento</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>] <span class="ruby-keyword">if</span> <span class="ruby-ivar">@elemento</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>] <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">aux</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">aux</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- maximo-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- maximo-method -->
+
+    
+      <div id="method-i-minimo" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">minimo</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Devuelve el valor minimo.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="minimo-source">
+            <pre><span class="ruby-comment"># File lib/lpp_t_04_matrix.rb, line 149</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">minimo</span> <span class="ruby-comment"># Devuelve el valor minimo.</span>
+        <span class="ruby-identifier">aux</span> = <span class="ruby-ivar">@elemento</span>[<span class="ruby-value">0</span>][<span class="ruby-value">0</span>]
+        <span class="ruby-ivar">@columnas</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+                <span class="ruby-ivar">@filas</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
+                        <span class="ruby-identifier">aux</span> = <span class="ruby-ivar">@elemento</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>] <span class="ruby-keyword">if</span> <span class="ruby-ivar">@elemento</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>] <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">aux</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">aux</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- minimo-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- minimo-method -->
+
+    
+      <div id="method-i-to_s" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_s</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Convierte la fraccion a una cadena</p>
+          
+          
+
+          
+          <div class="method-source-code" id="to_s-source">
+            <pre><span class="ruby-comment"># File lib/lpp_t_04_matrix.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_s</span> <span class="ruby-comment"># Convierte la fraccion a una cadena</span>
+        <span class="ruby-identifier">imprimir</span> = <span class="ruby-string">&quot;&quot;</span>
+        <span class="ruby-ivar">@filas</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+                <span class="ruby-ivar">@columnas</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
+                        <span class="ruby-identifier">imprimir</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{elemento[i][j]} &quot;</span>
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-identifier">imprimir</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;\n&quot;</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">imprimir</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- to_s-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- to_s-method -->
+
+    
+      <div id="method-i-traspuesta" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">traspuesta</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Devuelve la trasuesta de una <a href="Matriz.html">Matriz</a></p>
+          
+          
+
+          
+          <div class="method-source-code" id="traspuesta-source">
+            <pre><span class="ruby-comment"># File lib/lpp_t_04_matrix.rb, line 125</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">traspuesta</span> <span class="ruby-comment"># Devuelve la trasuesta de una Matriz</span>
+        <span class="ruby-identifier">elemento</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-value">0</span>.<span class="ruby-identifier">upto</span>(<span class="ruby-ivar">@columnas</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">elemento_fila</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+                <span class="ruby-value">0</span>.<span class="ruby-identifier">upto</span>(<span class="ruby-ivar">@filas</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
+                        <span class="ruby-identifier">elemento_fila</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@elemento</span>[<span class="ruby-identifier">j</span>][<span class="ruby-identifier">i</span>]
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-identifier">elemento</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">elemento_fila</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-constant">MatrizDensa</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@columnas</span>, <span class="ruby-ivar">@filas</span>, <span class="ruby-identifier">elemento</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- traspuesta-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- traspuesta-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.1.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
