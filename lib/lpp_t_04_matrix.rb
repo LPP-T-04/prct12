@@ -38,6 +38,17 @@ module LppT04Matrix
 	  		# Variable que guarda el numero de columnas de la matriz.
 	  		@columnas = columnas
 	  	end
+
+	  	def encontrar() # Suma dos Fracciones se le pasa un tipo fraccion.
+	  		valores = Array.new
+			@filas.times do |i|
+				@columnas.times do |j|
+					valores << [i,j] if yield @elemento[i][j]
+				end
+			end
+			valores
+		end
+
 	end
 
 	# Clase Matriz Densa hereda de Matriz
@@ -50,6 +61,8 @@ module LppT04Matrix
 			# Vector en el que se almacena el valor de los elementos de la matriz.
 			@elemento = elemento
 		end
+
+
 
 		# Metodo de acceso a la matriz
 		def [](i) # Metodo de acceso a la matriz

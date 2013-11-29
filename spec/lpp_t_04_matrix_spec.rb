@@ -252,5 +252,13 @@ describe LppT04Matrix do
 			end
 		end
 	end
+	describe "Funcion encotrar propuesta en la practica" do
+		it "El cuadrado del valor debe ser mayor que 6" do
+			(@m1.encontrar(){|x| x*x > 6}).should eq([[1,0],[1,1]])
+		end
+		it "El cuadrado del valor debe ser mayor que 6" do
+			(@m2.encontrar(){|x| x*x > 6}).should eq([[1,0],[1,1]])
+		end
+	end
 end
 
