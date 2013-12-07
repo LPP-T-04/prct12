@@ -8,3 +8,4 @@ gem 'guard-rspec'
 gem 'guard-bundler'
 gem 'guard-test'
 gem "rdoc", "~> 4.0.1"
+gem 'gemnasium'
