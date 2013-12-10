@@ -262,3 +262,34 @@ describe LppT04Matrix do
 	end
 end
 
+describe "DDL" do
+	before :all do
+		@pruebaSuma = Operaciones.new() do
+			operacion "suma",
+			densa(2,2) =>[[1,2],[3,4]],
+			dispersa(2, 2) => {0 => {0 => 1, 1 => 2}, 1 => {0 => 3, 1 => 4}}
+		end
+		@pruebaResta= Operaciones.new() do
+			operacion "resta",
+			densa(2,2) =>[[1,2],[3,4]],
+			dispersa(2, 2) => {0 => {0 => 1, 1 => 2}, 1 => {0 => 3, 1 => 4}}
+		end
+
+		@pruebaMultiplicacion= Operaciones.new() do
+			operacion "multipliacion",
+			densa(2,2) =>[[1,2],[3,4]],
+			dispersa(2,2) => {0 => {0 => 1, 1 => 2}, 1 => {0 => 3, 1 => 4}}
+		end
+
+
+	end
+	it "Suma" do
+		@pruebaSuma.to_s.should eq("suma\n2 4 \n6 8 \n\n")
+	end
+	it "Resta" do
+		@pruebaResta.to_s.should eq("resta\n0 0 \n0 0 \n\n")
+	end
+	it "Multiplicacion" do
+		@pruebaMultiplicacion.to_s.should eq("multipliacion\n7 10 \n15 22 \n\n")
+	end
+end
