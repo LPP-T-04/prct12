@@ -8,17 +8,31 @@
 
 Trabajo con el DSL:  
 Se define la operación y el tipo, tantas como operaciones se quieran  realizar:  
-    * Suma
-    * Resta
-    * Multiplicación
-    <pre>  
+    * Suma  
+    * Resta  
+    * Multiplicación  
+    <pre>
         operacion "suma",  
     </pre>  
 
 Se declaran las matrices, tantas como se quieran operar:  
 Tipo de la matriz, número de, filas columnas, => elementos de la matriz.  
-    <pre>  
+    <pre>
         densa(2,2) =>[[1,2],[3,4]],  
         dispersa(2, 2) => {0 => {0 => 1, 1 => 2}, 1 => {0 => 3, 1 => 4}}  
     </pre>  
+
+Un ejemplo:  
+    <pre>
+        operacion "suma",  
+        densa(2,2) =>[[1,2],[3,4]],  
+        densa(2,2) =>[[5,6],[7,8]],  
+        densa(2,2) =>[[1,2],[3,4]],  
+        dispersa(2, 2) => {0 => {0 => 1, 1 => 2}, 1 => {0 => 3, 1 => 4}}
+    </pre>  
+
+Para ejecutar el programa:  
+    <pre>
+        rake operar 
+    </pre> 
 [![Build Status](https://travis-ci.org/LPP-T-04/prct09.png?branch=master)]
