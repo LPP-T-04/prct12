@@ -15,3 +15,8 @@ Rake::RDocTask.new do |rd|
    rd.main = "README.md"
    rd.rdoc_files.include("README.md", "lib/**/*.rb")
 end
+
+desc "Operar hoja"
+task :operar do
+	sh "ruby -Ilib lib/operar.rb lib/hoja.rb"
+end
