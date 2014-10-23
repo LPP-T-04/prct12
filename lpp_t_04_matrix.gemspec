@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
     implementado los metodos para operar con ambos tipos de matrices, sin importar que objeto sea.
     Además se ha incluido el tratamiento de fracciones desarrollado en la practica anterior con la idea
     de que la matriz sea capaz de operar con elementos del tipo Franction. Los metodos implemnetados son: 
-    suma, resta, multiplicacion y traspuesta.}
+    suma, resta, multiplicacion y traspuesta. https://github.com/LPP-T-04 }
   spec.summary       = %q{Operacion con matrices densas y dispersas}
   spec.homepage      = ""
   spec.license       = "MIT"
